@@ -1,6 +1,7 @@
 {
     "name": "j0k3r/thermo-proxy-aws",
     "description": "A thermo proxy running on AWS",
+    "license": "MIT",
     "require": {
         "bref/bref": "^0.5.3",
         "bref/logger": "^1.0",
