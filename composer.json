@@ -1,0 +1,26 @@
+{
+    "name": "j0k3r/thermo-proxy-aws",
+    "description": "A thermo proxy running on AWS",
+    "require": {
+        "bref/bref": "^0.5.3",
+        "bref/logger": "^1.0",
+        "bref/dynamap": "^0.2.0",
+        "slim/slim": "^4.0",
+        "slim/psr7": "^0.5.0",
+        "nyholm/psr7": "^1.1",
+        "nyholm/psr7-server": "^0.3.0",
+        "guzzlehttp/psr7": "^1.6",
+        "http-interop/http-factory-guzzle": "^1.0",
+        "zendframework/zend-diactoros": "^2.1",
+        "php-di/php-di": "^6.0",
+        "symfony/yaml": "^4.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "Thermo\\": "src/"
+        }
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^2.15"
+    }
+}

@@ -1,0 +1,54 @@
+service: thermo-proxy
+
+provider:
+    name: aws
+    region: eu-west-1
+    runtime: provided
+    iamRoleStatements:
+        -   Effect: Allow
+            Action:
+                - dynamodb:Query
+                - dynamodb:Scan
+                - dynamodb:GetItem
+                - dynamodb:PutItem
+                - dynamodb:UpdateItem
+                - dynamodb:DeleteItem
+            Resource: 'arn:aws:dynamodb:eu-west-1:*:table/thermo'
+
+plugins:
+    - ./vendor/bref/bref
+
+functions:
+    api:
+        handler: src/App.php
+        description: 'Thermo proxy'
+        timeout: 20
+        layers:
+            - ${bref:layer.php-72-fpm}
+        events:
+            - http: 'POST /peanut/api/v1/peanuts/{mac}/events/'
+            - http: 'GET /thermo/{mac}/detail'
+            - http: 'GET /thermo/list'
+            - http: 'GET /thermo/init'
+            - schedule:
+                rate: rate(10 minutes)
+                input:
+                    warmer: true
+
+resources:
+    Resources:
+        ThermoTable:
+            Type: 'AWS::DynamoDB::Table'
+            Properties:
+                AttributeDefinitions:
+                    -
+                        AttributeName: mac
+                        AttributeType: S
+                KeySchema:
+                    -
+                        AttributeName: mac
+                        KeyType: HASH
+                ProvisionedThroughput:
+                    ReadCapacityUnits: 1
+                    WriteCapacityUnits: 1
+                TableName: thermo

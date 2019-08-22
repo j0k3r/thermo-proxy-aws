@@ -1,0 +1,9 @@
+devices:
+    -
+        mac: '00:0A:95:9D:68:16'
+        label: 'Salon'
+        color: '#f8485e'
+        sort: 1
+        last_update: '2019-08-04 13:35:32'
+        last_temperature: 2685
+        last_battery: 2924
