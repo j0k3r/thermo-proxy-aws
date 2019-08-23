@@ -31,7 +31,7 @@ class DetailController
         $start = microtime(true);
         $mac = $args['mac'];
         if (false === filter_var($mac, FILTER_VALIDATE_MAC)) {
-            $response->getBody()->write(json_encode([
+            $response->getBody()->write((string) json_encode([
                 'error' => 'Mac address (' . $mac . ') is not valid.',
             ]));
 
@@ -93,7 +93,7 @@ class DetailController
 
         $this->log->notice('getting details for ' . $mac . ' in ' . $end . 'ms');
 
-        $response->getBody()->write(json_encode([
+        $response->getBody()->write((string) json_encode([
             'max' => $rowsMax[0]['max'],
             'max_date' => $rowsMax[0]['time'],
             'min' => $rowsMin[0]['min'],

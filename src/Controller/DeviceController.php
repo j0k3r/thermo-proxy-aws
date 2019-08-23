@@ -35,7 +35,7 @@ class DeviceController
 
         // avoid overriding current database
         if (!empty($devices)) {
-            $response->getBody()->write(json_encode([
+            $response->getBody()->write((string) json_encode([
                 'error' => 'Some devices (' . \count($devices) . ') are already defined. Remove them to re-init the table.',
             ]));
 
@@ -47,7 +47,7 @@ class DeviceController
         try {
             $devices = Yaml::parseFile(__DIR__ . '/../../init_db.yml');
         } catch (ParseException $exception) {
-            $response->getBody()->write(json_encode([
+            $response->getBody()->write((string) json_encode([
                 'error' => 'Error while reading the init_db.yml file',
                 'exception' => $exception->getMessage(),
             ]));
@@ -72,7 +72,7 @@ class DeviceController
             $createdDevices[] = $device['label'];
         }
 
-        $response->getBody()->write(json_encode([
+        $response->getBody()->write((string) json_encode([
             'created' => $createdDevices,
         ]));
 

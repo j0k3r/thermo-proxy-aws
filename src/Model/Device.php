@@ -84,7 +84,7 @@ class Device
         $this->last_temperature = $last_temperature;
     }
 
-    public function getLastTemperature(): int
+    public function getLastTemperature(): ?int
     {
         return $this->last_temperature;
     }
@@ -94,7 +94,7 @@ class Device
         $this->last_battery = $last_battery;
     }
 
-    public function getLastBattery(): int
+    public function getLastBattery(): ?int
     {
         return $this->last_battery;
     }

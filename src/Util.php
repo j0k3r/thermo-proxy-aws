@@ -6,12 +6,12 @@ namespace Thermo;
 
 class Util
 {
-    public static function convertTemperature(int $temperature): float
+    public static function convertTemperature(?int $temperature): float
     {
         return $temperature / 100;
     }
 
-    public static function convertBattery(int $battery): int
+    public static function convertBattery(?int $battery): int
     {
         return (int) ($battery / 3000 * 100);
     }

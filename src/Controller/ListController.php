@@ -41,7 +41,7 @@ class ListController
 
         $this->log->notice('getting list in ' . $end . 'ms');
 
-        $response->getBody()->write(json_encode($data));
+        $response->getBody()->write((string) json_encode($data));
 
         return $response->withHeader('Content-Type', 'application/json');
     }

@@ -34,8 +34,15 @@ class EventController
 
         foreach ($events as $event) {
             if ('temperature' === $event['type']) {
-                $date = (\DateTime::createFromFormat('Y-m-d\TH:i:s.uO', $event['dateEvent']))
-                    ->setTimezone(new \DateTimeZone('Europe/Paris'));
+                $date = \DateTime::createFromFormat('Y-m-d\TH:i:s.uO', $event['dateEvent']);
+
+                if (false === $date) {
+                    $this->log->error('Date (' . $event['dateEvent'] . ') is not valid');
+
+                    continue;
+                }
+
+                $date->setTimezone(new \DateTimeZone('Europe/Paris'));
 
                 $this->influx->writePoints([
                     new Point(
@@ -43,7 +50,7 @@ class EventController
                         $event['data']['centidegreeCelsius'],
                         ['mac' => $args['mac']],
                         [],
-                        $date->format('Uv')
+                        (int) $date->format('Uv')
                     ),
                 ], Database::PRECISION_MILLISECONDS);
 
@@ -72,7 +79,7 @@ class EventController
 
         $this->log->notice('inserted ' . \count($events) . ' events in ' . $end . 'ms');
 
-        $response->getBody()->write(json_encode(['inserted' => \count($events)]));
+        $response->getBody()->write((string) json_encode(['inserted' => \count($events)]));
 
         return $response->withHeader('Content-Type', 'application/json');
     }
