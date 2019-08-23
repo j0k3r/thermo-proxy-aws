@@ -5,6 +5,7 @@ require __DIR__ . '/../vendor/autoload.php';
 use Bref\Logger\StderrLogger;
 use DI\Container;
 use Dynamap\Dynamap;
+use InfluxDB\Client;
 use Psr\Container\ContainerInterface;
 use Psr\Log\LogLevel;
 use Slim\Factory\AppFactory;
@@ -40,6 +41,11 @@ $dynamap = Dynamap::fromOptions($dynamoOptions, [
 ]);
 $container->set('dynamap', $dynamap);
 
+// define influx
+// $database = Client::fromDSN(sprintf('influxdb://%s:%s@%s:%s/%s', $user, $pass, $host, $port, $dbname));
+$influx = Client::fromDSN(sprintf('influxdb://localhost:8086/thermo'));
+$container->set('influx', $influx);
+
 $container->set('log', (new StderrLogger(LogLevel::NOTICE)));
 
 // define app
@@ -56,12 +62,14 @@ $container->set('ListController', function (ContainerInterface $c) {
 $container->set('DetailController', function (ContainerInterface $c) {
     return new DetailController(
         $c->get('dynamap'),
+        $c->get('influx'),
         $c->get('log')
     );
 });
 $container->set('EventController', function (ContainerInterface $c) {
     return new EventController(
         $c->get('dynamap'),
+        $c->get('influx'),
         $c->get('log')
     );
 });

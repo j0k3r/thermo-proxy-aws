@@ -7,7 +7,6 @@ use Psr\Http\Message\ResponseInterface as Response;
 use Psr\Http\Message\ServerRequestInterface as Request;
 use Psr\Log\AbstractLogger;
 use Thermo\Model\Device;
-use Thermo\Util;
 
 /**
  * List all available peanut.
@@ -25,7 +24,7 @@ class ListController
 
     public function list(Request $request, Response $response)
     {
-        $this->log->notice('getting list');
+        $start = microtime(true);
 
         $devices = $this->dynamap->getAll(Device::class);
 
@@ -33,14 +32,14 @@ class ListController
         foreach ($devices as $device) {
             $flatDevice = $device->toArray();
 
-            $flatDevice['last_update'] = $flatDevice['last_update'] ? $flatDevice['last_update']->format('Y-m-d\TH:i:s') : null;
-            $flatDevice['last_battery'] = Util::convertBattery($flatDevice['last_battery']);
-            $flatDevice['last_temperature'] = Util::convertTemperature($flatDevice['last_temperature']);
-
             $data[$flatDevice['sort']] = $flatDevice;
         }
 
-        rsort($data);
+        ksort($data);
+
+        $end = round((microtime(true) - $start) * 1000);
+
+        $this->log->notice('getting list in ' . $end . 'ms');
 
         $response->getBody()->write(json_encode($data));
 

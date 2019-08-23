@@ -20,11 +20,16 @@ class Util
     {
         $newData = [];
         foreach ($data as $item) {
+            $date = (new \DateTime())
+                ->setTimestamp(strtotime($item['time']))
+                ->setTimezone(new \DateTimeZone('Europe/Paris'))
+                ->format($dateFormat);
+
+            // var_dump($item, $date); die();
+
             $newData[] = [
-                // todo format time zone
-                // formatToTimeZone(item.time, dateFormat, { timeZone: 'Europe/Paris' }),
-                'time' => '',
-                'value' => $item['mean'] ? round($item['mean'], 2) : null,
+                'time' => $date,
+                'value' => $item['mean'] ? round($item['mean'], 1) : null,
             ];
         }
 

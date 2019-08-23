@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace Thermo\Model;
 
+use Thermo\Util;
+
 class Device
 {
     /** @var string */
@@ -104,9 +106,9 @@ class Device
             'label' => $this->label,
             'color' => $this->color,
             'sort' => $this->sort,
-            'last_update' => $this->last_update,
-            'last_temperature' => $this->last_temperature,
-            'last_battery' => $this->last_battery,
+            'last_update' => $this->last_update ? $this->last_update->format('Y-m-d H:i:s') : null,
+            'last_temperature' => Util::convertTemperature($this->last_temperature),
+            'last_battery' => Util::convertBattery($this->last_battery),
         ];
     }
 }
