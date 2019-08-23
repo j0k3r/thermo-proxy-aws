@@ -28,6 +28,7 @@ class EventController
 
     public function register(Request $request, Response $response, $args)
     {
+        $mac = $args['mac'];
         $start = microtime(true);
 
         $events = json_decode($request->getBody()->getContents(), true);
@@ -48,7 +49,7 @@ class EventController
                     new Point(
                         'temperature',
                         $event['data']['centidegreeCelsius'],
-                        ['mac' => $args['mac']],
+                        ['mac' => $mac],
                         [],
                         (int) $date->format('Uv')
                     ),
@@ -56,7 +57,7 @@ class EventController
 
                 $this->dynamap->partialUpdate(
                     Device::class,
-                    $args['mac'],
+                    $mac,
                     [
                         'last_update' => $date,
                         'last_temperature' => $event['data']['centidegreeCelsius'],
@@ -67,7 +68,7 @@ class EventController
             if ('battery' === $event['type']) {
                 $this->dynamap->partialUpdate(
                     Device::class,
-                    $args['mac'],
+                    $mac,
                     [
                         'last_battery' => $event['data']['levelMillivolt'],
                     ]
@@ -77,7 +78,7 @@ class EventController
 
         $end = round((microtime(true) - $start) * 1000);
 
-        $this->log->notice('inserted ' . \count($events) . ' events in ' . $end . 'ms');
+        $this->log->notice('inserted ' . \count($events) . ' events for ' . $mac . ' in ' . $end . 'ms');
 
         $response->getBody()->write((string) json_encode(['inserted' => \count($events)]));
 
