@@ -35,7 +35,10 @@ class ListController
             $data[$flatDevice['sort']] = $flatDevice;
         }
 
-        ksort($data);
+        // sort device by sort ascending
+        usort($data, function ($a, $b) {
+            return $a['sort'] < $b['sort'] ? -1 : 1;
+        });
 
         $end = round((microtime(true) - $start) * 1000);
 

@@ -55,7 +55,7 @@ class DetailController
             ->query('SELECT mean("value")/100 FROM "temperature" WHERE time > now() - 24h AND "mac"=\'' . $mac . '\' GROUP BY time(30m)')
             ->getPoints();
 
-        $last24h = Util::formatValueForGraph($rows24h, 'h:i');
+        $last24h = Util::formatValueForGraph($rows24h, 'H:i');
         // the first value has the same `time` as the last one
         // remove it to avoid overlap on the chart
         array_shift($last24h);
