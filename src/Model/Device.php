@@ -102,13 +102,13 @@ class Device
     public function toArray(): array
     {
         return [
-            'mac' => $this->mac,
-            'label' => $this->label,
-            'color' => $this->color,
-            'sort' => $this->sort,
-            'last_update' => $this->last_update ? $this->last_update->format('Y-m-d H:i:s') : null,
-            'last_temperature' => Util::convertTemperature($this->last_temperature),
-            'last_battery' => Util::convertBattery($this->last_battery),
+            'mac' => $this->getMac(),
+            'label' => $this->getLabel(),
+            'color' => $this->getColor(),
+            'sort' => $this->getSort(),
+            'last_update' => null === $this->getLastUpdate() ? null : $this->getLastUpdate()->format('Y-m-d H:i:s'),
+            'last_temperature' => Util::convertTemperature($this->getLastTemperature()),
+            'last_battery' => Util::convertBattery($this->getLastBattery()),
         ];
     }
 }

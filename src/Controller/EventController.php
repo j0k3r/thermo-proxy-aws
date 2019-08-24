@@ -31,7 +31,7 @@ class EventController
         $mac = $args['mac'];
         $start = microtime(true);
 
-        $events = json_decode($request->getBody()->getContents(), true);
+        $events = json_decode((string) $request->getBody(), true);
 
         foreach ($events as $event) {
             if ('temperature' === $event['type']) {

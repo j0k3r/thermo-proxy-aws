@@ -2,3 +2,4 @@ vendor/*
 .php_cs.cache
 .serverless/*
 init_db.yml
+build/

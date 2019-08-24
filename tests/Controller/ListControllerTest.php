@@ -1,6 +1,6 @@
 <?php
 
-namespace Test\Thermo\Controller;
+namespace Tests\Thermo\Controller;
 
 use Nyholm\Psr7\Response;
 use Nyholm\Psr7\ServerRequest;
@@ -19,8 +19,7 @@ class ListControllerTest extends TestCase
         $dynamap->expects($this->once())
             ->method('getAll')
             ->with(Device::class)
-            ->willReturn([
-            ]);
+            ->willReturn([]);
 
         $request = new ServerRequest('GET', 'http://ther.mo');
 

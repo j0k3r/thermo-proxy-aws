@@ -1,6 +1,6 @@
 <?php
 
-namespace Test\Thermo\Model;
+namespace Tests\Thermo\Model;
 
 use PHPUnit\Framework\TestCase;
 use Thermo\Model\Device;

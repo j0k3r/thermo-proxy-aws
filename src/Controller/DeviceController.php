@@ -27,7 +27,7 @@ class DeviceController
         $this->log = $log;
     }
 
-    public function init(Request $request, Response $response, $args)
+    public function init(Request $request, Response $response)
     {
         $this->log->notice('init devices');
 
