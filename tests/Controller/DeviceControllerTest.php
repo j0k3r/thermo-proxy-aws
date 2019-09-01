@@ -27,7 +27,7 @@ class DeviceControllerTest extends TestCase
 
         $request = new ServerRequest('GET', 'http://ther.mo');
 
-        $controller = new DeviceController($dynamap, new NullLogger());
+        $controller = new DeviceController($dynamap, null, new NullLogger());
         $res = $controller->init($request, new Response());
 
         $this->assertSame('application/json', $res->getHeader('Content-Type')[0]);
@@ -48,7 +48,7 @@ class DeviceControllerTest extends TestCase
 
         $request = new ServerRequest('GET', 'http://ther.mo');
 
-        $controller = new DeviceController($dynamap, new NullLogger());
+        $controller = new DeviceController($dynamap, null, new NullLogger());
         $res = $controller->init($request, new Response());
 
         $this->assertSame('application/json', $res->getHeader('Content-Type')[0]);

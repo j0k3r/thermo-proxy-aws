@@ -2,6 +2,8 @@
 
 namespace Thermo\Controller;
 
+use Aws\DynamoDb\DynamoDbClient;
+use Aws\DynamoDb\Exception\DynamoDbException;
 use Dynamap\Dynamap;
 use Psr\Http\Message\ResponseInterface as Response;
 use Psr\Http\Message\ServerRequestInterface as Request;
@@ -19,11 +21,13 @@ use Thermo\Model\Device;
 class DeviceController
 {
     protected $dynamap;
+    protected $dynamodb;
     protected $log;
 
-    public function __construct(Dynamap $dynamap, AbstractLogger $log)
+    public function __construct(Dynamap $dynamap, ?DynamoDbClient $dynamodb, AbstractLogger $log)
     {
         $this->dynamap = $dynamap;
+        $this->dynamodb = $dynamodb;
         $this->log = $log;
     }
 
@@ -31,7 +35,16 @@ class DeviceController
     {
         $this->log->notice('init devices');
 
-        $devices = $this->dynamap->getAll(Device::class);
+        try {
+            $devices = $this->dynamap->getAll(Device::class);
+        } catch (DynamoDbException $e) {
+            if ('Cannot do operations on a non-existent table' === $e->getAwsErrorMessage() && null !== $this->dynamodb) {
+                // create table by re-using defined information in serverless
+                $serverless = Yaml::parseFile(__DIR__ . '/../../serverless.yml');
+
+                $this->dynamodb->createTable($serverless['resources']['Resources']['ThermoTable']['Properties']);
+            }
+        }
 
         // avoid overriding current database
         if (!empty($devices)) {

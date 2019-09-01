@@ -2,6 +2,7 @@
 
 require __DIR__ . '/../vendor/autoload.php';
 
+use Aws\Sdk;
 use Bref\Logger\StderrLogger;
 use DI\Container;
 use Dynamap\Dynamap;
@@ -23,6 +24,7 @@ $dynamoOptions = [
     'version' => 'latest',
     'region' => 'eu-west-1',
 ];
+$container->set('dynamodb', null);
 // if the env variable isn't define, it means we are not in AWS env, so use local DynamoDB
 if (false === getenv('AWS_LAMBDA_RUNTIME_API')) {
     $dynamoOptions['endpoint'] = 'http://localhost:8000/';
@@ -30,6 +32,10 @@ if (false === getenv('AWS_LAMBDA_RUNTIME_API')) {
         'key' => 'FAKE_KEY',
         'secret' => 'FAKE_SECRET',
     ];
+
+    // create single SDK connection to DyanmoDB (to create the table locally)
+    $sdk = new Sdk($dynamoOptions);
+    $container->set('dynamodb', $sdk->createDynamoDb());
 }
 $dynamap = Dynamap::fromOptions($dynamoOptions, [
     Device::class => [
@@ -76,6 +82,7 @@ $container->set('EventController', function (ContainerInterface $c) {
 $container->set('DeviceController', function (ContainerInterface $c) {
     return new DeviceController(
         $c->get('dynamap'),
+        $c->get('dynamodb'),
         $c->get('log')
     );
 });
