@@ -3,3 +3,4 @@ vendor/*
 .serverless/*
 init_db.yml
 build/
+.env

@@ -25,8 +25,6 @@ class Util
                 ->setTimezone(new \DateTimeZone('Europe/Paris'))
                 ->format($dateFormat);
 
-            // var_dump($item, $date); die();
-
             $newData[] = [
                 'time' => $date,
                 'value' => $item['mean'] ? round($item['mean'], 1) : null,

@@ -5,6 +5,7 @@ require __DIR__ . '/../vendor/autoload.php';
 use Aws\Sdk;
 use Bref\Logger\StderrLogger;
 use DI\Container;
+use Dotenv\Dotenv;
 use Dynamap\Dynamap;
 use InfluxDB\Client;
 use Psr\Container\ContainerInterface;
@@ -16,6 +17,10 @@ use Thermo\Controller\EventController;
 use Thermo\Controller\ListController;
 use Thermo\Model\Device;
 
+$dotenv = Dotenv::create(__DIR__ . '/../');
+$dotenv->load();
+$dotenv->required(['INFLUXDB_HOST', 'INFLUXDB_PORT', 'INFLUXDB_DBNAME']);
+
 // define container
 $container = new Container();
 
@@ -25,6 +30,7 @@ $dynamoOptions = [
     'region' => 'eu-west-1',
 ];
 $container->set('dynamodb', null);
+
 // if the env variable isn't define, it means we are not in AWS env, so use local DynamoDB
 if (false === getenv('AWS_LAMBDA_RUNTIME_API')) {
     $dynamoOptions['endpoint'] = 'http://localhost:8000/';
@@ -48,8 +54,24 @@ $dynamap = Dynamap::fromOptions($dynamoOptions, [
 $container->set('dynamap', $dynamap);
 
 // define influx
-// $database = Client::fromDSN(sprintf('influxdb://%s:%s@%s:%s/%s', $user, $pass, $host, $port, $dbname));
-$influx = Client::fromDSN(sprintf('influxdb://localhost:8086/thermo'));
+$dsn = sprintf(
+    'influxdb://%s:%s/%s',
+    getenv('INFLUXDB_HOST'),
+    getenv('INFLUXDB_PORT'),
+    getenv('INFLUXDB_DBNAME')
+);
+if (!empty(getenv('INFLUXDB_USER')) && !empty(getenv('INFLUXDB_PASS'))) {
+    $dsn = sprintf(
+        'influxdb://%s:%s@%s:%s/%s',
+        getenv('INFLUXDB_USER'),
+        getenv('INFLUXDB_PASS'),
+        getenv('INFLUXDB_HOST'),
+        getenv('INFLUXDB_PORT'),
+        getenv('INFLUXDB_DBNAME')
+    );
+}
+
+$influx = Client::fromDSN($dsn);
 $container->set('influx', $influx);
 
 $container->set('log', (new StderrLogger(LogLevel::NOTICE)));

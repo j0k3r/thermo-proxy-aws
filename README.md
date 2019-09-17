@@ -47,13 +47,19 @@ That project targets people who don't want to throw their thermo peanut away and
     cp init_db.yml.dist init_db.yml
     ```
 
-3. Deploy to your AWS account
+3. Define information about InfluxDB (user & pass can be empty):
+
+    ```bash
+    cp .env.dist .env
+    ```
+
+4. Deploy to your AWS account
 
     ```bash
     serverless deploy --verbose
     ```
 
-4. Once deployed you'll have a dump inside the console with information about URLs of the API like
+5. Once deployed you'll have a dump inside the console with information about URLs of the API like
 
     ```bash
     Service Information
@@ -75,7 +81,7 @@ That project targets people who don't want to throw their thermo peanut away and
       None
     ```
 
-5. Init the DynamoDB table with data from `init_db.yml` (define at step 2) by browsing to `https://XXXXXXX.execute-api.eu-west-1.amazonaws.com/dev/thermo/init` (from the list above)
+6. Init the DynamoDB table with data from `init_db.yml` (define at step 2) by browsing to `https://XXXXXXX.execute-api.eu-west-1.amazonaws.com/dev/thermo/init` (from the list above)
 
 ## Running locally
 
