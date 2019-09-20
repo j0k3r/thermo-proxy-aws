@@ -8,16 +8,16 @@
     "packages": [
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.112.2",
+            "version": "3.112.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "0d7a3ecb5dca10d1872ee5106cb154cbef52cf1c"
+                "reference": "13e5e52f8ceccd7e476cc6caef3eed941797fd31"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/0d7a3ecb5dca10d1872ee5106cb154cbef52cf1c",
-                "reference": "0d7a3ecb5dca10d1872ee5106cb154cbef52cf1c",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/13e5e52f8ceccd7e476cc6caef3eed941797fd31",
+                "reference": "13e5e52f8ceccd7e476cc6caef3eed941797fd31",
                 "shasum": ""
             },
             "require": {
@@ -87,20 +87,20 @@
                 "s3",
                 "sdk"
             ],
-            "time": "2019-09-17T18:07:57+00:00"
+            "time": "2019-09-19T20:36:59+00:00"
         },
         {
             "name": "bref/bref",
-            "version": "0.5.5",
+            "version": "0.5.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/brefphp/bref.git",
-                "reference": "0120e12eacaf7a7d1215d1a7a02c3fa857d66407"
+                "reference": "882977072334e78e18ee6c8251b9a1c7e5636f33"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/brefphp/bref/zipball/0120e12eacaf7a7d1215d1a7a02c3fa857d66407",
-                "reference": "0120e12eacaf7a7d1215d1a7a02c3fa857d66407",
+                "url": "https://api.github.com/repos/brefphp/bref/zipball/882977072334e78e18ee6c8251b9a1c7e5636f33",
+                "reference": "882977072334e78e18ee6c8251b9a1c7e5636f33",
                 "shasum": ""
             },
             "require": {
@@ -146,7 +146,7 @@
                 "lambda",
                 "serverless"
             ],
-            "time": "2019-08-29T10:13:56+00:00"
+            "time": "2019-09-10T19:18:51+00:00"
         },
         {
             "name": "bref/dynamap",
@@ -690,9 +690,9 @@
             "authors": [
                 {
                     "name": "Jeremy Lindblom",
-                    "role": "Developer",
                     "email": "jeremeamia@gmail.com",
-                    "homepage": "https://github.com/jeremeamia"
+                    "homepage": "https://github.com/jeremeamia",
+                    "role": "Developer"
                 }
             ],
             "description": "Serialize Closure objects, including their context and binding",
