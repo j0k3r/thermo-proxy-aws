@@ -8,16 +8,16 @@
     "packages": [
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.112.4",
+            "version": "3.112.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "13e5e52f8ceccd7e476cc6caef3eed941797fd31"
+                "reference": "224955fcb7ca9edc8de3e4147c0b180aeaee5a48"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/13e5e52f8ceccd7e476cc6caef3eed941797fd31",
-                "reference": "13e5e52f8ceccd7e476cc6caef3eed941797fd31",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/224955fcb7ca9edc8de3e4147c0b180aeaee5a48",
+                "reference": "224955fcb7ca9edc8de3e4147c0b180aeaee5a48",
                 "shasum": ""
             },
             "require": {
@@ -87,20 +87,20 @@
                 "s3",
                 "sdk"
             ],
-            "time": "2019-09-19T20:36:59+00:00"
+            "time": "2019-09-26T18:13:00+00:00"
         },
         {
             "name": "bref/bref",
-            "version": "0.5.6",
+            "version": "0.5.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/brefphp/bref.git",
-                "reference": "882977072334e78e18ee6c8251b9a1c7e5636f33"
+                "reference": "5ee5f6382bfbb9797d2c22565243150a34d666c8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/brefphp/bref/zipball/882977072334e78e18ee6c8251b9a1c7e5636f33",
-                "reference": "882977072334e78e18ee6c8251b9a1c7e5636f33",
+                "url": "https://api.github.com/repos/brefphp/bref/zipball/5ee5f6382bfbb9797d2c22565243150a34d666c8",
+                "reference": "5ee5f6382bfbb9797d2c22565243150a34d666c8",
                 "shasum": ""
             },
             "require": {
@@ -146,7 +146,7 @@
                 "lambda",
                 "serverless"
             ],
-            "time": "2019-09-10T19:18:51+00:00"
+            "time": "2019-09-26T14:34:36+00:00"
         },
         {
             "name": "bref/dynamap",
