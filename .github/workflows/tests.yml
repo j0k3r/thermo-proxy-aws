@@ -1,0 +1,33 @@
+name: test
+
+on: push
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v1
+      with:
+        fetch-depth: 1
+
+    - name: php
+      run: php -i
+
+    - name: Composer dependencies
+      run: composer install --no-ansi --no-interaction --no-scripts --no-suggest --no-progress --prefer-dist -o
+
+    - name: CS Fixer
+      run: php vendor/bin/php-cs-fixer fix
+
+    - name: Prepare
+      run: cp init_db.yml.dist init_db.yml
+
+    - name: Testsuite
+      run: php vendor/bin/simple-phpunit -v
+      env:
+          CI: true
+          TZ: 'Europe/Paris'
+
+    - name: Analyse
+      run: php vendor/bin/phpstan analyse src tests --no-progress --level 7
