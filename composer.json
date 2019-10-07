@@ -7,7 +7,7 @@
         "bref/logger": "^1.0",
         "bref/dynamap": "^0.2.0",
         "slim/slim": "^4.0",
-        "slim/psr7": "^0.5.0",
+        "slim/psr7": "^0.6",
         "nyholm/psr7": "^1.1",
         "nyholm/psr7-server": "^0.3.0",
         "guzzlehttp/psr7": "^1.6",
