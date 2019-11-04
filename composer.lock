@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3305f5c992dcf92030c91ccf9fd8d28b",
+    "content-hash": "4ebb987ab7e292023686f9571699e155",
     "packages": [
         {
             "name": "aws/aws-sdk-php",
@@ -970,16 +970,16 @@
         },
         {
             "name": "nyholm/psr7-server",
-            "version": "0.3.0",
+            "version": "0.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Nyholm/psr7-server.git",
-                "reference": "1b71a848fcb066fb805b7a9ab3f41ff65bffcde8"
+                "reference": "f1fa9e8685024a45c7b84844c14a48e49044b0a8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Nyholm/psr7-server/zipball/1b71a848fcb066fb805b7a9ab3f41ff65bffcde8",
-                "reference": "1b71a848fcb066fb805b7a9ab3f41ff65bffcde8",
+                "url": "https://api.github.com/repos/Nyholm/psr7-server/zipball/f1fa9e8685024a45c7b84844c14a48e49044b0a8",
+                "reference": "f1fa9e8685024a45c7b84844c14a48e49044b0a8",
                 "shasum": ""
             },
             "require": {
@@ -1018,7 +1018,7 @@
                 "psr-17",
                 "psr-7"
             ],
-            "time": "2018-09-02T10:41:28+00:00"
+            "time": "2019-11-04T10:44:02+00:00"
         },
         {
             "name": "php-di/invoker",

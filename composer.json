@@ -9,7 +9,7 @@
         "slim/slim": "^4.0",
         "slim/psr7": "^0.6",
         "nyholm/psr7": "^1.1",
-        "nyholm/psr7-server": "^0.3.0",
+        "nyholm/psr7-server": "^0.4.0",
         "guzzlehttp/psr7": "^1.6",
         "http-interop/http-factory-guzzle": "^1.0",
         "zendframework/zend-diactoros": "^2.1",
