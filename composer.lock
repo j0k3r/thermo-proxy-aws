@@ -8,16 +8,16 @@
     "packages": [
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.112.26",
+            "version": "3.112.34",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "eda066813388de5ab8584f06707dacd0b15908b0"
+                "reference": "5918919b64550f7436a01738ea49e56703c83799"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/eda066813388de5ab8584f06707dacd0b15908b0",
-                "reference": "eda066813388de5ab8584f06707dacd0b15908b0",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/5918919b64550f7436a01738ea49e56703c83799",
+                "reference": "5918919b64550f7436a01738ea49e56703c83799",
                 "shasum": ""
             },
             "require": {
@@ -87,20 +87,20 @@
                 "s3",
                 "sdk"
             ],
-            "time": "2019-10-22T18:17:52+00:00"
+            "time": "2019-11-01T18:08:35+00:00"
         },
         {
             "name": "bref/bref",
-            "version": "0.5.9",
+            "version": "0.5.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/brefphp/bref.git",
-                "reference": "a79aca81d3d23f02d4ea1c5fea2aa7c56feab421"
+                "reference": "08e74bcf36787c6efe868662459903fb1d30f762"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/brefphp/bref/zipball/a79aca81d3d23f02d4ea1c5fea2aa7c56feab421",
-                "reference": "a79aca81d3d23f02d4ea1c5fea2aa7c56feab421",
+                "url": "https://api.github.com/repos/brefphp/bref/zipball/08e74bcf36787c6efe868662459903fb1d30f762",
+                "reference": "08e74bcf36787c6efe868662459903fb1d30f762",
                 "shasum": ""
             },
             "require": {
@@ -146,7 +146,7 @@
                 "lambda",
                 "serverless"
             ],
-            "time": "2019-10-22T10:04:41+00:00"
+            "time": "2019-10-30T21:09:58+00:00"
         },
         {
             "name": "bref/dynamap",
@@ -292,27 +292,28 @@
         },
         {
             "name": "guzzlehttp/guzzle",
-            "version": "6.3.3",
+            "version": "6.4.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/guzzle.git",
-                "reference": "407b0cb880ace85c9b63c5f9551db498cb2d50ba"
+                "reference": "0895c932405407fd3a7368b6910c09a24d26db11"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/407b0cb880ace85c9b63c5f9551db498cb2d50ba",
-                "reference": "407b0cb880ace85c9b63c5f9551db498cb2d50ba",
+                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/0895c932405407fd3a7368b6910c09a24d26db11",
+                "reference": "0895c932405407fd3a7368b6910c09a24d26db11",
                 "shasum": ""
             },
             "require": {
+                "ext-json": "*",
                 "guzzlehttp/promises": "^1.0",
-                "guzzlehttp/psr7": "^1.4",
+                "guzzlehttp/psr7": "^1.6.1",
                 "php": ">=5.5"
             },
             "require-dev": {
                 "ext-curl": "*",
                 "phpunit/phpunit": "^4.8.35 || ^5.7 || ^6.4 || ^7.0",
-                "psr/log": "^1.0"
+                "psr/log": "^1.1"
             },
             "suggest": {
                 "psr/log": "Required for using the Log middleware"
@@ -324,12 +325,12 @@
                 }
             },
             "autoload": {
-                "files": [
-                    "src/functions_include.php"
-                ],
                 "psr-4": {
                     "GuzzleHttp\\": "src/"
-                }
+                },
+                "files": [
+                    "src/functions_include.php"
+                ]
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -353,7 +354,7 @@
                 "rest",
                 "web service"
             ],
-            "time": "2018-04-22T15:46:56+00:00"
+            "time": "2019-10-23T15:58:00+00:00"
         },
         {
             "name": "guzzlehttp/promises",
