@@ -33,5 +33,10 @@
         "psr-4": {
             "Tests\\Thermo\\": "tests/"
         }
+    },
+    "config": {
+        "platform": {
+            "php": "7.2"
+        }
     }
 }

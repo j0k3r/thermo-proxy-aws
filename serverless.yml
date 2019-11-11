@@ -34,10 +34,6 @@ functions:
             - http: 'GET /thermo/{mac}/detail'
             - http: 'GET /thermo/list'
             - http: 'GET /thermo/init'
-            - schedule:
-                rate: rate(10 minutes)
-                input:
-                    warmer: true
 
 resources:
     Resources:
