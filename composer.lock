@@ -691,9 +691,9 @@
             "authors": [
                 {
                     "name": "Jeremy Lindblom",
-                    "role": "Developer",
                     "email": "jeremeamia@gmail.com",
-                    "homepage": "https://github.com/jeremeamia"
+                    "homepage": "https://github.com/jeremeamia",
+                    "role": "Developer"
                 }
             ],
             "description": "Serialize Closure objects, including their context and binding",
@@ -2574,7 +2574,7 @@
         },
         {
             "name": "symfony/yaml",
-            "version": "v4.3.6",
+            "version": "v4.3.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/yaml.git",
