@@ -8,16 +8,16 @@
     "packages": [
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.115.1",
+            "version": "3.117.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "43407075f446c202d9520498d4ebcbc5de439690"
+                "reference": "6951cd08326d939f1fd1097a490fccb9751a59d7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/43407075f446c202d9520498d4ebcbc5de439690",
-                "reference": "43407075f446c202d9520498d4ebcbc5de439690",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/6951cd08326d939f1fd1097a490fccb9751a59d7",
+                "reference": "6951cd08326d939f1fd1097a490fccb9751a59d7",
                 "shasum": ""
             },
             "require": {
@@ -87,20 +87,20 @@
                 "s3",
                 "sdk"
             ],
-            "time": "2019-11-08T19:17:23+00:00"
+            "time": "2019-11-14T19:27:06+00:00"
         },
         {
             "name": "bref/bref",
-            "version": "0.5.10",
+            "version": "0.5.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/brefphp/bref.git",
-                "reference": "08e74bcf36787c6efe868662459903fb1d30f762"
+                "reference": "87b6088caedad0f41446a79631e412738c2dea07"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/brefphp/bref/zipball/08e74bcf36787c6efe868662459903fb1d30f762",
-                "reference": "08e74bcf36787c6efe868662459903fb1d30f762",
+                "url": "https://api.github.com/repos/brefphp/bref/zipball/87b6088caedad0f41446a79631e412738c2dea07",
+                "reference": "87b6088caedad0f41446a79631e412738c2dea07",
                 "shasum": ""
             },
             "require": {
@@ -146,7 +146,7 @@
                 "lambda",
                 "serverless"
             ],
-            "time": "2019-10-30T21:09:58+00:00"
+            "time": "2019-11-14T16:01:50+00:00"
         },
         {
             "name": "bref/dynamap",
@@ -1925,16 +1925,16 @@
         },
         {
             "name": "symfony/console",
-            "version": "v4.3.6",
+            "version": "v4.3.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/console.git",
-                "reference": "136c4bd62ea871d00843d1bc0316de4c4a84bb78"
+                "reference": "831424efae0a1fe6642784bd52aae14ece6538e6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/console/zipball/136c4bd62ea871d00843d1bc0316de4c4a84bb78",
-                "reference": "136c4bd62ea871d00843d1bc0316de4c4a84bb78",
+                "url": "https://api.github.com/repos/symfony/console/zipball/831424efae0a1fe6642784bd52aae14ece6538e6",
+                "reference": "831424efae0a1fe6642784bd52aae14ece6538e6",
                 "shasum": ""
             },
             "require": {
@@ -1996,11 +1996,11 @@
             ],
             "description": "Symfony Console Component",
             "homepage": "https://symfony.com",
-            "time": "2019-10-30T12:58:49+00:00"
+            "time": "2019-11-13T07:29:07+00:00"
         },
         {
             "name": "symfony/filesystem",
-            "version": "v4.3.6",
+            "version": "v4.3.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/filesystem.git",
@@ -2391,7 +2391,7 @@
         },
         {
             "name": "symfony/process",
-            "version": "v4.3.6",
+            "version": "v4.3.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/process.git",
