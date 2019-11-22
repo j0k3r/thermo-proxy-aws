@@ -4,3 +4,4 @@ vendor/*
 init_db.yml
 build/
 .env
+.phpunit.result.cache
