@@ -62,9 +62,11 @@ class DetailControllerTest extends TestCase
             ->willReturnCallback(function ($argument) {
                 $data = [[
                     'mean' => 23.21,
+                    'max' => 43.21,
+                    'min' => 3.21,
                 ]];
 
-                if (strpos($argument, 'MAX("value")')) {
+                if (false !== strpos($argument, 'SELECT MAX("value")/100 FROM')) {
                     $data = [
                         [
                             'max' => 30,
@@ -73,16 +75,16 @@ class DetailControllerTest extends TestCase
                     ];
                 }
 
-                if (strpos($argument, 'MIN("value")')) {
+                if (false !== strpos($argument, 'SELECT MIN("value")/100 FROM')) {
                     $data = [
                         [
-                            'min' => 30,
+                            'min' => 3,
                             'time' => '2018-06-03T21:41:30',
                         ],
                     ];
                 }
 
-                if (strpos($argument, 'GROUP BY')) {
+                if (false !== strpos($argument, 'GROUP BY')) {
                     $data = [
                         [
                             'mean' => 43.21,
@@ -132,9 +134,15 @@ class DetailControllerTest extends TestCase
         $this->assertArrayHasKey('min_date', $body);
         $this->assertArrayHasKey('last_24h', $body);
         $this->assertArrayHasKey('mean_24h', $body);
+        $this->assertArrayHasKey('max_24h', $body);
+        $this->assertArrayHasKey('min_24h', $body);
         $this->assertArrayHasKey('last_30d', $body);
         $this->assertArrayHasKey('mean_30d', $body);
+        $this->assertArrayHasKey('max_30d', $body);
+        $this->assertArrayHasKey('min_30d', $body);
         $this->assertArrayHasKey('last_52w', $body);
         $this->assertArrayHasKey('mean_52w', $body);
+        $this->assertArrayHasKey('max_52w', $body);
+        $this->assertArrayHasKey('min_52w', $body);
     }
 }
