@@ -52,7 +52,7 @@ class DetailController
 
         // data for 24h
         $rows24h = $this->influx
-            ->query('SELECT mean("value")/100 FROM "temperature" WHERE time > now() - 24h AND "mac"=\'' . $mac . '\' GROUP BY time(30m)')
+            ->query('SELECT MEAN("value")/100 FROM "temperature" WHERE time > now() - 24h AND "mac"=\'' . $mac . '\' GROUP BY time(30m)')
             ->getPoints();
 
         $last24h = Util::formatValueForGraph($rows24h, 'H:i');
@@ -60,24 +60,24 @@ class DetailController
         // remove it to avoid overlap on the chart
         array_shift($last24h);
 
-        $mean24h = $this->influx
-            ->query('SELECT mean("value")/100 FROM "temperature" WHERE time > now() - 24h AND "mac"=\'' . $mac . '\'')
+        $data24h = $this->influx
+            ->query('SELECT MEAN("value")/100, MIN("value")/100, MAX("value")/100 FROM "temperature" WHERE time > now() - 24h AND "mac"=\'' . $mac . '\'')
             ->getPoints();
 
         // data for 30d
         $rows30d = $this->influx
-            ->query('SELECT mean("value")/100 FROM "temperature" WHERE time > now() - 30d AND "mac"=\'' . $mac . '\' GROUP BY time(1d)')
+            ->query('SELECT MEAN("value")/100 FROM "temperature" WHERE time > now() - 30d AND "mac"=\'' . $mac . '\' GROUP BY time(1d)')
             ->getPoints();
 
         $last30d = Util::formatValueForGraph($rows30d, 'd');
 
-        $mean30d = $this->influx
-            ->query('SELECT mean("value")/100 FROM "temperature" WHERE time > now() - 30d AND "mac"=\'' . $mac . '\'')
+        $data30d = $this->influx
+            ->query('SELECT MEAN("value")/100, MIN("value")/100, MAX("value")/100 FROM "temperature" WHERE time > now() - 30d AND "mac"=\'' . $mac . '\'')
             ->getPoints();
 
         // data for 52w (a year)
         $rows52w = $this->influx
-            ->query('SELECT mean("value")/100 FROM "temperature" WHERE time > now() - 52w AND "mac"=\'' . $mac . '\' GROUP BY time(4w)')
+            ->query('SELECT MEAN("value")/100 FROM "temperature" WHERE time > now() - 52w AND "mac"=\'' . $mac . '\' GROUP BY time(4w)')
             ->getPoints();
 
         $last52w = Util::formatValueForGraph($rows52w, 'm');
@@ -85,8 +85,8 @@ class DetailController
         // remove it to avoid overlap on the chart
         array_shift($last52w);
 
-        $mean52w = $this->influx
-            ->query('SELECT mean("value")/100 FROM "temperature" WHERE time > now() - 52w AND "mac"=\'' . $mac . '\'')
+        $data52w = $this->influx
+            ->query('SELECT MEAN("value")/100, MIN("value")/100, MAX("value")/100 FROM "temperature" WHERE time > now() - 52w AND "mac"=\'' . $mac . '\'')
             ->getPoints();
 
         $end = round((microtime(true) - $start) * 1000);
@@ -99,11 +99,17 @@ class DetailController
             'min' => $rowsMin[0]['min'],
             'min_date' => $rowsMin[0]['time'],
             'last_24h' => $last24h,
-            'mean_24h' => empty($mean24h[0]) ? null : round($mean24h[0]['mean'], 1),
+            'mean_24h' => empty($data24h[0]) ? null : round($data24h[0]['mean'], 1),
+            'min_24h' => empty($data24h[0]) ? null : round($data24h[0]['min'], 1),
+            'max_24h' => empty($data24h[0]) ? null : round($data24h[0]['max'], 1),
             'last_30d' => $last30d,
-            'mean_30d' => empty($mean30d[0]) ? null : round($mean30d[0]['mean'], 1),
+            'mean_30d' => empty($data30d[0]) ? null : round($data30d[0]['mean'], 1),
+            'min_30d' => empty($data30d[0]) ? null : round($data30d[0]['min'], 1),
+            'max_30d' => empty($data30d[0]) ? null : round($data30d[0]['max'], 1),
             'last_52w' => $last52w,
-            'mean_52w' => empty($mean52w[0]) ? null : round($mean52w[0]['mean'], 1),
+            'mean_52w' => empty($data52w[0]) ? null : round($data52w[0]['mean'], 1),
+            'min_52w' => empty($data52w[0]) ? null : round($data52w[0]['min'], 1),
+            'max_52w' => empty($data52w[0]) ? null : round($data52w[0]['max'], 1),
         ] + $device));
 
         return $response->withHeader('Content-Type', 'application/json');
