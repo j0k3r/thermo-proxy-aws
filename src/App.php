@@ -17,7 +17,7 @@ use Thermo\Controller\EventController;
 use Thermo\Controller\ListController;
 use Thermo\Model\Device;
 
-$dotenv = Dotenv::create(__DIR__ . '/../');
+$dotenv = Dotenv::createImmutable(__DIR__ . '/../');
 $dotenv->load();
 $dotenv->required(['INFLUXDB_HOST', 'INFLUXDB_PORT', 'INFLUXDB_DBNAME']);
 
