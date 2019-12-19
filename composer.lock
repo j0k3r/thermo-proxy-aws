@@ -8,16 +8,16 @@
     "packages": [
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.129.1",
+            "version": "3.129.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "4e326d030ef7c82585d276969b3079169b4806e2"
+                "reference": "7f6eb26563519bb7d5a295b674f31178db64cdfd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/4e326d030ef7c82585d276969b3079169b4806e2",
-                "reference": "4e326d030ef7c82585d276969b3079169b4806e2",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/7f6eb26563519bb7d5a295b674f31178db64cdfd",
+                "reference": "7f6eb26563519bb7d5a295b674f31178db64cdfd",
                 "shasum": ""
             },
             "require": {
@@ -88,32 +88,32 @@
                 "s3",
                 "sdk"
             ],
-            "time": "2019-12-16T19:10:16+00:00"
+            "time": "2019-12-18T19:23:10+00:00"
         },
         {
             "name": "bref/bref",
-            "version": "0.5.11",
+            "version": "0.5.12",
             "source": {
                 "type": "git",
                 "url": "https://github.com/brefphp/bref.git",
-                "reference": "87b6088caedad0f41446a79631e412738c2dea07"
+                "reference": "be2d60d4989d82f5cbe502b6c39e6ba00a626056"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/brefphp/bref/zipball/87b6088caedad0f41446a79631e412738c2dea07",
-                "reference": "87b6088caedad0f41446a79631e412738c2dea07",
+                "url": "https://api.github.com/repos/brefphp/bref/zipball/be2d60d4989d82f5cbe502b6c39e6ba00a626056",
+                "reference": "be2d60d4989d82f5cbe502b6c39e6ba00a626056",
                 "shasum": ""
             },
             "require": {
                 "aws/aws-sdk-php": "^3.44",
                 "ext-curl": "*",
                 "ext-json": "*",
-                "hollodotme/fast-cgi-client": "^2.7",
+                "hollodotme/fast-cgi-client": "^3.0",
                 "mnapoli/silly": "^1.7",
                 "php": "^7.2.0",
                 "psr/http-message": "^1.0",
-                "symfony/filesystem": "^3.1|^4.0",
-                "symfony/process": "^3.3|^4.0"
+                "symfony/filesystem": "^3.1|^4.0|^5.0",
+                "symfony/process": "^3.3|^4.0|^5.0"
             },
             "require-dev": {
                 "doctrine/coding-standard": "^5.0",
@@ -147,7 +147,7 @@
                 "lambda",
                 "serverless"
             ],
-            "time": "2019-11-14T16:01:50+00:00"
+            "time": "2019-12-18T13:21:05+00:00"
         },
         {
             "name": "bref/dynamap",
@@ -482,16 +482,16 @@
         },
         {
             "name": "hollodotme/fast-cgi-client",
-            "version": "v2.7.2",
+            "version": "v3.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/hollodotme/fast-cgi-client.git",
-                "reference": "785608e89059f6fd490e6df626703a28f48c5adb"
+                "reference": "d4a31fba1f0432fdffafa8746e5a4460d83028b6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hollodotme/fast-cgi-client/zipball/785608e89059f6fd490e6df626703a28f48c5adb",
-                "reference": "785608e89059f6fd490e6df626703a28f48c5adb",
+                "url": "https://api.github.com/repos/hollodotme/fast-cgi-client/zipball/d4a31fba1f0432fdffafa8746e5a4460d83028b6",
+                "reference": "d4a31fba1f0432fdffafa8746e5a4460d83028b6",
                 "shasum": ""
             },
             "require": {
@@ -540,7 +540,7 @@
                 "fastcgi",
                 "php-fpm"
             ],
-            "time": "2019-05-30T22:57:49+00:00"
+            "time": "2019-10-24T11:14:40+00:00"
         },
         {
             "name": "http-interop/http-factory-guzzle",
@@ -693,9 +693,9 @@
             "authors": [
                 {
                     "name": "Jeremy Lindblom",
-                    "role": "Developer",
                     "email": "jeremeamia@gmail.com",
-                    "homepage": "https://github.com/jeremeamia"
+                    "homepage": "https://github.com/jeremeamia",
+                    "role": "Developer"
                 }
             ],
             "description": "Serialize Closure objects, including their context and binding",
