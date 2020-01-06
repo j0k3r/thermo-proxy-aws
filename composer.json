@@ -4,18 +4,18 @@
     "license": "MIT",
     "require": {
         "bref/bref": "^0.5.3",
-        "bref/logger": "^1.0",
         "bref/dynamap": "^0.2.0",
-        "slim/slim": "^4.0",
-        "slim/psr7": "^1.0",
-        "nyholm/psr7": "^1.1",
-        "nyholm/psr7-server": "^0.4.1",
+        "bref/logger": "^1.0",
         "guzzlehttp/psr7": "^1.6",
         "http-interop/http-factory-guzzle": "^1.0",
-        "zendframework/zend-diactoros": "^2.1",
-        "php-di/php-di": "^6.0",
-        "symfony/yaml": "^4.3",
         "influxdb/influxdb-php": "^1.15",
+        "laminas/laminas-diactoros": "^2.2",
+        "nyholm/psr7": "^1.1",
+        "nyholm/psr7-server": "^0.4.1",
+        "php-di/php-di": "^6.0",
+        "slim/psr7": "^1.0",
+        "slim/slim": "^4.0",
+        "symfony/yaml": "^4.3",
         "vlucas/phpdotenv": "^4.1"
     },
     "require-dev": {
@@ -37,6 +37,7 @@
     "config": {
         "platform": {
             "php": "7.2"
-        }
+        },
+        "sort-packages": true
     }
 }
