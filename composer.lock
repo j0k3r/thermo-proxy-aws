@@ -8,26 +8,26 @@
     "packages": [
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.130.3",
+            "version": "3.132.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "916356edb5c30fa564d02de94bde51a9c0bb4469"
+                "reference": "f814995664d4ad616f674e664ae069b9f4e340bf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/916356edb5c30fa564d02de94bde51a9c0bb4469",
-                "reference": "916356edb5c30fa564d02de94bde51a9c0bb4469",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/f814995664d4ad616f674e664ae069b9f4e340bf",
+                "reference": "f814995664d4ad616f674e664ae069b9f4e340bf",
                 "shasum": ""
             },
             "require": {
                 "ext-json": "*",
                 "ext-pcre": "*",
                 "ext-simplexml": "*",
-                "guzzlehttp/guzzle": "^5.3.3|^6.2.1",
-                "guzzlehttp/promises": "~1.0",
+                "guzzlehttp/guzzle": "^5.3.3|^6.2.1|^7.0",
+                "guzzlehttp/promises": "^1.0",
                 "guzzlehttp/psr7": "^1.4.1",
-                "mtdowling/jmespath.php": "~2.2",
+                "mtdowling/jmespath.php": "^2.5",
                 "php": ">=5.5"
             },
             "require-dev": {
@@ -88,20 +88,20 @@
                 "s3",
                 "sdk"
             ],
-            "time": "2020-01-02T19:13:50+00:00"
+            "time": "2020-01-10T19:14:49+00:00"
         },
         {
             "name": "bref/bref",
-            "version": "0.5.12",
+            "version": "0.5.13",
             "source": {
                 "type": "git",
                 "url": "https://github.com/brefphp/bref.git",
-                "reference": "be2d60d4989d82f5cbe502b6c39e6ba00a626056"
+                "reference": "630ce0ff91117134546c5c5f22c59b5ed3aed556"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/brefphp/bref/zipball/be2d60d4989d82f5cbe502b6c39e6ba00a626056",
-                "reference": "be2d60d4989d82f5cbe502b6c39e6ba00a626056",
+                "url": "https://api.github.com/repos/brefphp/bref/zipball/630ce0ff91117134546c5c5f22c59b5ed3aed556",
+                "reference": "630ce0ff91117134546c5c5f22c59b5ed3aed556",
                 "shasum": ""
             },
             "require": {
@@ -147,7 +147,7 @@
                 "lambda",
                 "serverless"
             ],
-            "time": "2019-12-18T13:21:05+00:00"
+            "time": "2020-01-13T06:36:17+00:00"
         },
         {
             "name": "bref/dynamap",
