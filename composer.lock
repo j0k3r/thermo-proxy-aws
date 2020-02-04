@@ -8,16 +8,16 @@
     "packages": [
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.133.4",
+            "version": "3.133.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "6ecd907672784cca89584c7553fa38589c1efcb6"
+                "reference": "cd7bd2fdd159146ef6c7eeb90b73fae4fd11da57"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/6ecd907672784cca89584c7553fa38589c1efcb6",
-                "reference": "6ecd907672784cca89584c7553fa38589c1efcb6",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/cd7bd2fdd159146ef6c7eeb90b73fae4fd11da57",
+                "reference": "cd7bd2fdd159146ef6c7eeb90b73fae4fd11da57",
                 "shasum": ""
             },
             "require": {
@@ -88,20 +88,20 @@
                 "s3",
                 "sdk"
             ],
-            "time": "2020-01-21T19:14:39+00:00"
+            "time": "2020-01-24T19:11:35+00:00"
         },
         {
             "name": "bref/bref",
-            "version": "0.5.13",
+            "version": "0.5.14",
             "source": {
                 "type": "git",
                 "url": "https://github.com/brefphp/bref.git",
-                "reference": "630ce0ff91117134546c5c5f22c59b5ed3aed556"
+                "reference": "6893d7aa2f77d13892127a0b8f8c14f4d8af3863"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/brefphp/bref/zipball/630ce0ff91117134546c5c5f22c59b5ed3aed556",
-                "reference": "630ce0ff91117134546c5c5f22c59b5ed3aed556",
+                "url": "https://api.github.com/repos/brefphp/bref/zipball/6893d7aa2f77d13892127a0b8f8c14f4d8af3863",
+                "reference": "6893d7aa2f77d13892127a0b8f8c14f4d8af3863",
                 "shasum": ""
             },
             "require": {
@@ -112,6 +112,8 @@
                 "mnapoli/silly": "^1.7",
                 "php": "^7.2.0",
                 "psr/http-message": "^1.0",
+                "psr/http-server-handler": "^1.0",
+                "riverline/multipart-parser": "^2.0.6",
                 "symfony/filesystem": "^3.1|^4.0|^5.0",
                 "symfony/process": "^3.3|^4.0|^5.0"
             },
@@ -147,7 +149,7 @@
                 "lambda",
                 "serverless"
             ],
-            "time": "2020-01-13T06:36:17+00:00"
+            "time": "2020-02-03T07:30:08+00:00"
         },
         {
             "name": "bref/dynamap",
@@ -1906,6 +1908,58 @@
             "time": "2019-03-08T08:55:37+00:00"
         },
         {
+            "name": "riverline/multipart-parser",
+            "version": "2.0.8",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Riverline/multipart-parser.git",
+                "reference": "2fe9026789754c1ff07c06047f0acc113e90933a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Riverline/multipart-parser/zipball/2fe9026789754c1ff07c06047f0acc113e90933a",
+                "reference": "2fe9026789754c1ff07c06047f0acc113e90933a",
+                "shasum": ""
+            },
+            "require": {
+                "ext-mbstring": "*",
+                "php": ">=5.6.0"
+            },
+            "require-dev": {
+                "laminas/laminas-diactoros": "^1.8.7",
+                "phpunit/phpunit": "^5.2 || ^6.0 || ^7.0",
+                "psr/http-message": "^1.0",
+                "symfony/psr-http-message-bridge": "^1.1"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Riverline\\MultiPartParser\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Romain Cambien",
+                    "email": "romain@cambien.net"
+                },
+                {
+                    "name": "Riverline",
+                    "homepage": "http://www.riverline.fr"
+                }
+            ],
+            "description": "One class library to parse multipart content with encoding and charset support.",
+            "keywords": [
+                "http",
+                "multipart",
+                "parser"
+            ],
+            "time": "2020-01-24T09:39:24+00:00"
+        },
+        {
             "name": "slim/psr7",
             "version": "1.0.0",
             "source": {
@@ -2073,16 +2127,16 @@
         },
         {
             "name": "symfony/console",
-            "version": "v4.4.3",
+            "version": "v4.4.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/console.git",
-                "reference": "e9ee09d087e2c88eaf6e5fc0f5c574f64d100e4f"
+                "reference": "f512001679f37e6a042b51897ed24a2f05eba656"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/console/zipball/e9ee09d087e2c88eaf6e5fc0f5c574f64d100e4f",
-                "reference": "e9ee09d087e2c88eaf6e5fc0f5c574f64d100e4f",
+                "url": "https://api.github.com/repos/symfony/console/zipball/f512001679f37e6a042b51897ed24a2f05eba656",
+                "reference": "f512001679f37e6a042b51897ed24a2f05eba656",
                 "shasum": ""
             },
             "require": {
@@ -2145,11 +2199,11 @@
             ],
             "description": "Symfony Console Component",
             "homepage": "https://symfony.com",
-            "time": "2020-01-10T21:54:01+00:00"
+            "time": "2020-01-25T12:44:29+00:00"
         },
         {
             "name": "symfony/filesystem",
-            "version": "v5.0.3",
+            "version": "v5.0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/filesystem.git",
@@ -2540,7 +2594,7 @@
         },
         {
             "name": "symfony/process",
-            "version": "v5.0.3",
+            "version": "v5.0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/process.git",
