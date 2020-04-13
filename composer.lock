@@ -8,29 +8,28 @@
     "packages": [
         {
             "name": "async-aws/cloud-formation",
-            "version": "0.3.0",
+            "version": "0.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/async-aws/cloud-formation.git",
-                "reference": "206d84594efc99b526bb9e29bd5291bd2cf6bd45"
+                "reference": "ba4e51b6893f1ca130bb89166b2c4e87c8c3b1c6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/async-aws/cloud-formation/zipball/206d84594efc99b526bb9e29bd5291bd2cf6bd45",
-                "reference": "206d84594efc99b526bb9e29bd5291bd2cf6bd45",
+                "url": "https://api.github.com/repos/async-aws/cloud-formation/zipball/ba4e51b6893f1ca130bb89166b2c4e87c8c3b1c6",
+                "reference": "ba4e51b6893f1ca130bb89166b2c4e87c8c3b1c6",
                 "shasum": ""
             },
             "require": {
-                "async-aws/core": "^0.4",
+                "async-aws/core": "^0.5",
                 "ext-filter": "*",
                 "ext-simplexml": "*",
-                "php": "^7.2.5",
-                "symfony/http-client-contracts": "^1.0 || ^2.0"
+                "php": "^7.2.5"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "0.3-dev"
+                    "dev-master": "0.4-dev"
                 }
             },
             "autoload": {
@@ -42,25 +41,25 @@
             "license": [
                 "MIT"
             ],
-            "description": "Async AWS CloudFormation client.",
+            "description": "AsyncAws CloudFormation client.",
             "keywords": [
                 "aws",
                 "lambda"
             ],
-            "time": "2020-03-14T23:01:16+00:00"
+            "time": "2020-04-04T20:34:11+00:00"
         },
         {
             "name": "async-aws/core",
-            "version": "0.4.0",
+            "version": "0.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/async-aws/core.git",
-                "reference": "b47d5867fce4c19ce445ce9902b8128fe809c593"
+                "reference": "d0916262716086b4babcbf52d1ed162e0ff62a7a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/async-aws/core/zipball/b47d5867fce4c19ce445ce9902b8128fe809c593",
-                "reference": "b47d5867fce4c19ce445ce9902b8128fe809c593",
+                "url": "https://api.github.com/repos/async-aws/core/zipball/d0916262716086b4babcbf52d1ed162e0ff62a7a",
+                "reference": "d0916262716086b4babcbf52d1ed162e0ff62a7a",
                 "shasum": ""
             },
             "require": {
@@ -76,7 +75,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "0.4-dev"
+                    "dev-master": "0.5-dev"
                 }
             },
             "autoload": {
@@ -88,33 +87,32 @@
             "license": [
                 "MIT"
             ],
-            "description": "Async AWS core package with common classes and interfaces.",
-            "time": "2020-03-14T23:01:16+00:00"
+            "description": "AsyncAws core package with common classes and interfaces.",
+            "time": "2020-04-05T13:29:48+00:00"
         },
         {
             "name": "async-aws/lambda",
-            "version": "0.3.0",
+            "version": "0.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/async-aws/lambda.git",
-                "reference": "cb34a9004cc1a98887954e6553f40464b514efe7"
+                "reference": "6b4524d31c3afd022f26bab2915aad35bcd0b054"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/async-aws/lambda/zipball/cb34a9004cc1a98887954e6553f40464b514efe7",
-                "reference": "cb34a9004cc1a98887954e6553f40464b514efe7",
+                "url": "https://api.github.com/repos/async-aws/lambda/zipball/6b4524d31c3afd022f26bab2915aad35bcd0b054",
+                "reference": "6b4524d31c3afd022f26bab2915aad35bcd0b054",
                 "shasum": ""
             },
             "require": {
-                "async-aws/core": "^0.4",
+                "async-aws/core": "^0.5",
                 "ext-json": "*",
-                "php": "^7.2.5",
-                "symfony/http-client-contracts": "^1.0 || ^2.0"
+                "php": "^7.2.5"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "0.3-dev"
+                    "dev-master": "0.4-dev"
                 }
             },
             "autoload": {
@@ -126,12 +124,12 @@
             "license": [
                 "MIT"
             ],
-            "description": "Async AWS Lambda client.",
+            "description": "AsyncAws Lambda client.",
             "keywords": [
                 "aws",
                 "lambda"
             ],
-            "time": "2020-03-14T23:01:16+00:00"
+            "time": "2020-04-05T12:16:56+00:00"
         },
         {
             "name": "aws/aws-sdk-php",
@@ -219,25 +217,26 @@
         },
         {
             "name": "bref/bref",
-            "version": "0.5.20",
+            "version": "0.5.21",
             "source": {
                 "type": "git",
                 "url": "https://github.com/brefphp/bref.git",
-                "reference": "3de74ca1d3ab639ad2d0ecba5de8fde2dfcaa859"
+                "reference": "edf500c6ba457ae6c9e1fc0025368d24f685a11e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/brefphp/bref/zipball/3de74ca1d3ab639ad2d0ecba5de8fde2dfcaa859",
-                "reference": "3de74ca1d3ab639ad2d0ecba5de8fde2dfcaa859",
+                "url": "https://api.github.com/repos/brefphp/bref/zipball/edf500c6ba457ae6c9e1fc0025368d24f685a11e",
+                "reference": "edf500c6ba457ae6c9e1fc0025368d24f685a11e",
                 "shasum": ""
             },
             "require": {
-                "async-aws/cloud-formation": "^0.3",
-                "async-aws/lambda": "^0.3",
+                "async-aws/cloud-formation": "^0.4",
+                "async-aws/lambda": "^0.4",
                 "ext-curl": "*",
                 "ext-json": "*",
                 "hollodotme/fast-cgi-client": "^3.0",
                 "mnapoli/silly": "^1.7",
+                "nyholm/psr7": "^1.2",
                 "php": "^7.2.0",
                 "psr/http-message": "^1.0",
                 "psr/http-server-handler": "^1.0",
@@ -277,7 +276,7 @@
                 "lambda",
                 "serverless"
             ],
-            "time": "2020-03-29T13:06:30+00:00"
+            "time": "2020-04-12T20:49:15+00:00"
         },
         {
             "name": "bref/dynamap",
@@ -2257,16 +2256,16 @@
         },
         {
             "name": "symfony/console",
-            "version": "v4.4.6",
+            "version": "v4.4.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/console.git",
-                "reference": "20bc0c1068565103075359f5ce9e0639b36f92d1"
+                "reference": "10bb3ee3c97308869d53b3e3d03f6ac23ff985f7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/console/zipball/20bc0c1068565103075359f5ce9e0639b36f92d1",
-                "reference": "20bc0c1068565103075359f5ce9e0639b36f92d1",
+                "url": "https://api.github.com/repos/symfony/console/zipball/10bb3ee3c97308869d53b3e3d03f6ac23ff985f7",
+                "reference": "10bb3ee3c97308869d53b3e3d03f6ac23ff985f7",
                 "shasum": ""
             },
             "require": {
@@ -2329,20 +2328,20 @@
             ],
             "description": "Symfony Console Component",
             "homepage": "https://symfony.com",
-            "time": "2020-03-16T08:56:54+00:00"
+            "time": "2020-03-30T11:41:10+00:00"
         },
         {
             "name": "symfony/filesystem",
-            "version": "v5.0.6",
+            "version": "v5.0.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/filesystem.git",
-                "reference": "81daae1bc46cb8eef557f5faa36e9c785f983db1"
+                "reference": "ca3b87dd09fff9b771731637f5379965fbfab420"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/filesystem/zipball/81daae1bc46cb8eef557f5faa36e9c785f983db1",
-                "reference": "81daae1bc46cb8eef557f5faa36e9c785f983db1",
+                "url": "https://api.github.com/repos/symfony/filesystem/zipball/ca3b87dd09fff9b771731637f5379965fbfab420",
+                "reference": "ca3b87dd09fff9b771731637f5379965fbfab420",
                 "shasum": ""
             },
             "require": {
@@ -2379,20 +2378,20 @@
             ],
             "description": "Symfony Filesystem Component",
             "homepage": "https://symfony.com",
-            "time": "2020-03-16T13:02:39+00:00"
+            "time": "2020-03-27T16:56:45+00:00"
         },
         {
             "name": "symfony/http-client",
-            "version": "v5.0.6",
+            "version": "v5.0.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/http-client.git",
-                "reference": "b643c720858d433d2c376407703df1f874534f07"
+                "reference": "14d386ae55b699ea9a0ddb872fa5f3e35219bba8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/http-client/zipball/b643c720858d433d2c376407703df1f874534f07",
-                "reference": "b643c720858d433d2c376407703df1f874534f07",
+                "url": "https://api.github.com/repos/symfony/http-client/zipball/14d386ae55b699ea9a0ddb872fa5f3e35219bba8",
+                "reference": "14d386ae55b699ea9a0ddb872fa5f3e35219bba8",
                 "shasum": ""
             },
             "require": {
@@ -2447,7 +2446,7 @@
             ],
             "description": "Symfony HttpClient component",
             "homepage": "https://symfony.com",
-            "time": "2020-03-16T16:38:48+00:00"
+            "time": "2020-03-27T16:56:45+00:00"
         },
         {
             "name": "symfony/http-client-contracts",
@@ -2849,16 +2848,16 @@
         },
         {
             "name": "symfony/process",
-            "version": "v5.0.6",
+            "version": "v5.0.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/process.git",
-                "reference": "67abad0d1f1340424418f94cedadc367599ecb61"
+                "reference": "c5ca4a0fc16a0c888067d43fbcfe1f8a53d8e70e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/process/zipball/67abad0d1f1340424418f94cedadc367599ecb61",
-                "reference": "67abad0d1f1340424418f94cedadc367599ecb61",
+                "url": "https://api.github.com/repos/symfony/process/zipball/c5ca4a0fc16a0c888067d43fbcfe1f8a53d8e70e",
+                "reference": "c5ca4a0fc16a0c888067d43fbcfe1f8a53d8e70e",
                 "shasum": ""
             },
             "require": {
@@ -2894,7 +2893,7 @@
             ],
             "description": "Symfony Process Component",
             "homepage": "https://symfony.com",
-            "time": "2020-03-23T12:42:46+00:00"
+            "time": "2020-03-27T16:56:45+00:00"
         },
         {
             "name": "symfony/property-info",
