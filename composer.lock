@@ -50,16 +50,16 @@
         },
         {
             "name": "async-aws/core",
-            "version": "0.5.0",
+            "version": "0.5.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/async-aws/core.git",
-                "reference": "d0916262716086b4babcbf52d1ed162e0ff62a7a"
+                "reference": "94343ea7c89c818903bf296eef912f5ae38268f2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/async-aws/core/zipball/d0916262716086b4babcbf52d1ed162e0ff62a7a",
-                "reference": "d0916262716086b4babcbf52d1ed162e0ff62a7a",
+                "url": "https://api.github.com/repos/async-aws/core/zipball/94343ea7c89c818903bf296eef912f5ae38268f2",
+                "reference": "94343ea7c89c818903bf296eef912f5ae38268f2",
                 "shasum": ""
             },
             "require": {
@@ -69,7 +69,7 @@
                 "php": "^7.2.5",
                 "psr/log": "~1.0",
                 "symfony/http-client": "^4.4 || ^5.0",
-                "symfony/http-client-contracts": "^1.0 || ^2.0",
+                "symfony/http-client-contracts": "^1.1.8 || ^2.0",
                 "symfony/service-contracts": "^1.0 || ^2.0"
             },
             "type": "library",
@@ -88,7 +88,7 @@
                 "MIT"
             ],
             "description": "AsyncAws core package with common classes and interfaces.",
-            "time": "2020-04-05T13:29:48+00:00"
+            "time": "2020-04-15T13:25:46+00:00"
         },
         {
             "name": "async-aws/lambda",
@@ -217,16 +217,16 @@
         },
         {
             "name": "bref/bref",
-            "version": "0.5.22",
+            "version": "0.5.23",
             "source": {
                 "type": "git",
                 "url": "https://github.com/brefphp/bref.git",
-                "reference": "4cb8aa3f4d7da049d12e79d9144f2147cc1cffdc"
+                "reference": "0d69e6a167607c165ccf380376018691ecbb636f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/brefphp/bref/zipball/4cb8aa3f4d7da049d12e79d9144f2147cc1cffdc",
-                "reference": "4cb8aa3f4d7da049d12e79d9144f2147cc1cffdc",
+                "url": "https://api.github.com/repos/brefphp/bref/zipball/0d69e6a167607c165ccf380376018691ecbb636f",
+                "reference": "0d69e6a167607c165ccf380376018691ecbb636f",
                 "shasum": ""
             },
             "require": {
@@ -248,7 +248,7 @@
                 "doctrine/coding-standard": "^5.0",
                 "guzzlehttp/guzzle": "^6.3",
                 "phpstan/phpstan": "^0.11.5",
-                "phpunit/phpunit": "^6.5",
+                "phpunit/phpunit": "^7.5",
                 "zendframework/zend-diactoros": "^1.6|^2.0"
             },
             "bin": [
@@ -276,7 +276,7 @@
                 "lambda",
                 "serverless"
             ],
-            "time": "2020-04-13T14:46:14+00:00"
+            "time": "2020-04-17T17:25:58+00:00"
         },
         {
             "name": "bref/dynamap",
