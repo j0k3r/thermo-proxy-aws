@@ -50,16 +50,16 @@
         },
         {
             "name": "async-aws/core",
-            "version": "0.5.1",
+            "version": "0.5.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/async-aws/core.git",
-                "reference": "94343ea7c89c818903bf296eef912f5ae38268f2"
+                "reference": "5068974b6d04be6b2c1ea4144f4737bb84718e45"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/async-aws/core/zipball/94343ea7c89c818903bf296eef912f5ae38268f2",
-                "reference": "94343ea7c89c818903bf296eef912f5ae38268f2",
+                "url": "https://api.github.com/repos/async-aws/core/zipball/5068974b6d04be6b2c1ea4144f4737bb84718e45",
+                "reference": "5068974b6d04be6b2c1ea4144f4737bb84718e45",
                 "shasum": ""
             },
             "require": {
@@ -88,7 +88,7 @@
                 "MIT"
             ],
             "description": "AsyncAws core package with common classes and interfaces.",
-            "time": "2020-04-15T13:25:46+00:00"
+            "time": "2020-04-25T18:07:23+00:00"
         },
         {
             "name": "async-aws/lambda",
@@ -217,16 +217,16 @@
         },
         {
             "name": "bref/bref",
-            "version": "0.5.23",
+            "version": "0.5.24",
             "source": {
                 "type": "git",
                 "url": "https://github.com/brefphp/bref.git",
-                "reference": "0d69e6a167607c165ccf380376018691ecbb636f"
+                "reference": "404c69f2f293c2fe0841835cc8addac72575791d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/brefphp/bref/zipball/0d69e6a167607c165ccf380376018691ecbb636f",
-                "reference": "0d69e6a167607c165ccf380376018691ecbb636f",
+                "url": "https://api.github.com/repos/brefphp/bref/zipball/404c69f2f293c2fe0841835cc8addac72575791d",
+                "reference": "404c69f2f293c2fe0841835cc8addac72575791d",
                 "shasum": ""
             },
             "require": {
@@ -276,7 +276,7 @@
                 "lambda",
                 "serverless"
             ],
-            "time": "2020-04-17T17:25:58+00:00"
+            "time": "2020-04-27T12:07:20+00:00"
         },
         {
             "name": "bref/dynamap",
