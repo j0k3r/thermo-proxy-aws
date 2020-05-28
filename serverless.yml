@@ -22,6 +22,12 @@ provider:
 plugins:
     - ./vendor/bref/bref
 
+package:
+    exclude:
+        - build/**
+        - tests/**
+        - .github/**
+
 functions:
     api:
         handler: src/App.php
