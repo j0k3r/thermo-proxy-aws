@@ -15,10 +15,10 @@ jobs:
       run: php -i
 
     - name: Composer dependencies
-      run: composer install --no-ansi --no-interaction --no-scripts --no-suggest --no-progress --prefer-dist -o
+      run: composer install --no-ansi --no-interaction --no-suggest --no-progress --prefer-dist -o
 
     - name: CS Fixer
-      run: php vendor/bin/php-cs-fixer fix
+      run: php vendor/bin/php-cs-fixer fix --dry-run
 
     - name: Prepare
       run: cp init_db.yml.dist init_db.yml
