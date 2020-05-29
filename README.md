@@ -1,5 +1,7 @@
 # Thermo proxy AWS
 
+![test](https://github.com/j0k3r/thermo-proxy-aws/workflows/test/badge.svg)
+
 _TL;DR_: a little PHP app running on AWS Lambda that:
 
 - receive data from the Sense Peanut App running on iOS or Android
