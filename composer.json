@@ -11,7 +11,7 @@
         "influxdb/influxdb-php": "^1.15",
         "laminas/laminas-diactoros": "^2.2",
         "nyholm/psr7": "^1.1",
-        "nyholm/psr7-server": "^0.4.1",
+        "nyholm/psr7-server": "^1.0.0",
         "php-di/php-di": "^6.0",
         "slim/psr7": "^1.0",
         "slim/slim": "^4.0",
