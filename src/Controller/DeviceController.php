@@ -5,6 +5,7 @@ namespace Thermo\Controller;
 use Aws\DynamoDb\DynamoDbClient;
 use Aws\DynamoDb\Exception\DynamoDbException;
 use Dynamap\Dynamap;
+use InfluxDB\Database;
 use Psr\Http\Message\ResponseInterface as Response;
 use Psr\Http\Message\ServerRequestInterface as Request;
 use Psr\Log\AbstractLogger;
@@ -24,13 +25,16 @@ class DeviceController
     protected $dynamap;
     /** @var DynamoDbClient|null */
     protected $dynamodb;
+    /** @var Database */
+    protected $influx;
     /** @var AbstractLogger */
     protected $log;
 
-    public function __construct(Dynamap $dynamap, ?DynamoDbClient $dynamodb, AbstractLogger $log)
+    public function __construct(Dynamap $dynamap, ?DynamoDbClient $dynamodb, Database $influx, AbstractLogger $log)
     {
         $this->dynamap = $dynamap;
         $this->dynamodb = $dynamodb;
+        $this->influx = $influx;
         $this->log = $log;
     }
 
@@ -47,6 +51,10 @@ class DeviceController
 
                 $this->dynamodb->createTable($serverless['resources']['Resources']['ThermoTable']['Properties']);
             }
+        }
+
+        if (!$this->influx->exists()) {
+            $this->influx->create();
         }
 
         // avoid overriding current database

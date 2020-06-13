@@ -93,13 +93,19 @@ That project targets people who don't want to throw their thermo peanut away and
     docker run -p 8000:8000 amazon/dynamodb-local
     ```
 
-2. Launch the app
+1. Run InfluxDB locally [using Docker](https://hub.docker.com/_/influxdb)
+
+    ```bash
+    docker run -p 8086:8086 influxdb
+    ```
+
+1. Launch the app
 
    ```bash
    php -S localhost:8888 -t src src/App.php
    ```
 
-3. Init the DynamoDB table by browsing to `http://localhost:8888/thermo/init`
+1. Init the DynamoDB table by browsing to `http://localhost:8888/thermo/init`
 
 ## Using the proxy app
 

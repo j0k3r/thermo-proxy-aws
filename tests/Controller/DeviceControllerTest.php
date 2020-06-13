@@ -25,9 +25,16 @@ class DeviceControllerTest extends TestCase
                 ],
             ]);
 
+        $influx = $this->getMockBuilder('InfluxDB\Database')
+            ->disableOriginalConstructor()
+            ->getMock();
+        $influx->expects($this->once())
+            ->method('exists')
+            ->willReturn(true);
+
         $request = new ServerRequest('GET', 'http://ther.mo');
 
-        $controller = new DeviceController($dynamap, null, new NullLogger());
+        $controller = new DeviceController($dynamap, null, $influx, new NullLogger());
         $res = $controller->init($request, new Response());
 
         $this->assertSame('application/json', $res->getHeader('Content-Type')[0]);
@@ -46,9 +53,18 @@ class DeviceControllerTest extends TestCase
         $dynamap->expects($this->any())
             ->method('save');
 
+        $influx = $this->getMockBuilder('InfluxDB\Database')
+            ->disableOriginalConstructor()
+            ->getMock();
+        $influx->expects($this->once())
+            ->method('exists')
+            ->willReturn(false);
+        $influx->expects($this->once())
+            ->method('create');
+
         $request = new ServerRequest('GET', 'http://ther.mo');
 
-        $controller = new DeviceController($dynamap, null, new NullLogger());
+        $controller = new DeviceController($dynamap, null, $influx, new NullLogger());
         $res = $controller->init($request, new Response());
 
         $this->assertSame('application/json', $res->getHeader('Content-Type')[0]);
