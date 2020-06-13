@@ -30,4 +30,4 @@ jobs:
           TZ: 'Europe/Paris'
 
     - name: Analyse
-      run: php vendor/bin/phpstan analyse src tests --no-progress --level 7
+      run: php vendor/bin/phpstan analyse

@@ -15,8 +15,11 @@ use Thermo\Model\Device;
  */
 class EventController
 {
+    /** @var Dynamap */
     protected $dynamap;
+    /** @var Database */
     protected $influx;
+    /** @var AbstractLogger */
     protected $log;
 
     public function __construct(Dynamap $dynamap, Database $influx, AbstractLogger $log)
@@ -26,7 +29,7 @@ class EventController
         $this->log = $log;
     }
 
-    public function register(Request $request, Response $response, $args)
+    public function register(Request $request, Response $response, array $args): Response
     {
         $mac = $args['mac'];
         $start = microtime(true);

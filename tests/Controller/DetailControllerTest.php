@@ -11,7 +11,7 @@ use Thermo\Model\Device;
 
 class DetailControllerTest extends TestCase
 {
-    public function testDetailBadMac()
+    public function testDetailBadMac(): void
     {
         $dynamap = $this->getMockBuilder('Dynamap\Dynamap')
             ->disableOriginalConstructor()
@@ -34,7 +34,7 @@ class DetailControllerTest extends TestCase
         $this->assertArrayHasKey('error', json_decode((string) $res->getBody(), true));
     }
 
-    public function testDetail()
+    public function testDetail(): void
     {
         $date = (new \DateTimeImmutable())->setTimestamp(1566553890);
 

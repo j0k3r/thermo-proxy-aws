@@ -7,7 +7,7 @@ use Thermo\Model\Device;
 
 class DeviceTest extends TestCase
 {
-    public function testToArray()
+    public function testToArray(): void
     {
         $date = (new \DateTimeImmutable())->setTimestamp(1566553890);
 

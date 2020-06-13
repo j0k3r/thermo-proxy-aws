@@ -15,8 +15,11 @@ use Thermo\Util;
  */
 class DetailController
 {
+    /** @var Dynamap */
     protected $dynamap;
+    /** @var Database */
     protected $influx;
+    /** @var AbstractLogger */
     protected $log;
 
     public function __construct(Dynamap $dynamap, Database $influx, AbstractLogger $log)
@@ -26,7 +29,7 @@ class DetailController
         $this->log = $log;
     }
 
-    public function detail(Request $request, Response $response, $args)
+    public function detail(Request $request, Response $response, array $args): Response
     {
         $start = microtime(true);
         $mac = $args['mac'];
@@ -40,7 +43,9 @@ class DetailController
                 ->withStatus(500);
         }
 
-        $device = $this->dynamap->get(Device::class, $mac)->toArray();
+        /** @var Device */
+        $deviceObj = $this->dynamap->get(Device::class, $mac);
+        $device = $deviceObj->toArray();
 
         $rowsMax = $this->influx
             ->query('SELECT MAX("value")/100 FROM "temperature" WHERE mac = \'' . $mac . '\'')

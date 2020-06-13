@@ -13,7 +13,9 @@ use Thermo\Model\Device;
  */
 class ListController
 {
+    /** @var Dynamap */
     protected $dynamap;
+    /** @var AbstractLogger */
     protected $log;
 
     public function __construct(Dynamap $dynamap, AbstractLogger $log)
@@ -22,7 +24,7 @@ class ListController
         $this->log = $log;
     }
 
-    public function list(Request $request, Response $response)
+    public function list(Request $request, Response $response): Response
     {
         $start = microtime(true);
 

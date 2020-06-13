@@ -7,21 +7,21 @@ use Thermo\Util;
 
 class UtilTest extends TestCase
 {
-    public function testConvertTemperature()
+    public function testConvertTemperature(): void
     {
         $this->assertSame(1.0, Util::convertTemperature(100));
         $this->assertSame(24.18, Util::convertTemperature(2418));
         $this->assertSame(0.0, Util::convertTemperature(null));
     }
 
-    public function testConvertBattery()
+    public function testConvertBattery(): void
     {
         $this->assertSame(3, Util::convertBattery(100));
         $this->assertSame(80, Util::convertBattery(2418));
         $this->assertSame(0, Util::convertBattery(null));
     }
 
-    public function testFormatValueForGraph()
+    public function testFormatValueForGraph(): void
     {
         $data = [
             [

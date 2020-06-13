@@ -11,7 +11,7 @@ use Thermo\Model\Device;
 
 class ListControllerTest extends TestCase
 {
-    public function testListEmpty()
+    public function testListEmpty(): void
     {
         $dynamap = $this->getMockBuilder('Dynamap\Dynamap')
             ->disableOriginalConstructor()
@@ -30,7 +30,7 @@ class ListControllerTest extends TestCase
         $this->assertSame([], json_decode((string) $res->getBody(), true));
     }
 
-    public function testList()
+    public function testList(): void
     {
         $date = (new \DateTimeImmutable())->setTimestamp(1566553890);
 

@@ -16,7 +16,7 @@ class Util
         return (int) ($battery / 3000 * 100);
     }
 
-    public static function formatValueForGraph($data, $dateFormat): array
+    public static function formatValueForGraph(array $data, string $dateFormat): array
     {
         $newData = [];
         foreach ($data as $item) {

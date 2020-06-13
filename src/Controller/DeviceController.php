@@ -20,8 +20,11 @@ use Thermo\Model\Device;
  */
 class DeviceController
 {
+    /** @var Dynamap */
     protected $dynamap;
+    /** @var DynamoDbClient|null */
     protected $dynamodb;
+    /** @var AbstractLogger */
     protected $log;
 
     public function __construct(Dynamap $dynamap, ?DynamoDbClient $dynamodb, AbstractLogger $log)
@@ -31,7 +34,7 @@ class DeviceController
         $this->log = $log;
     }
 
-    public function init(Request $request, Response $response)
+    public function init(Request $request, Response $response): Response
     {
         $this->log->notice('init devices');
 

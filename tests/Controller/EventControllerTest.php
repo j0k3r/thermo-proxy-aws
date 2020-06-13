@@ -11,7 +11,7 @@ use Thermo\Model\Device;
 
 class EventControllerTest extends TestCase
 {
-    public function testPostEmptyEvent()
+    public function testPostEmptyEvent(): void
     {
         $dynamap = $this->getMockBuilder('Dynamap\Dynamap')
             ->disableOriginalConstructor()
@@ -34,7 +34,7 @@ class EventControllerTest extends TestCase
         $this->assertSame(['inserted' => 0], json_decode((string) $res->getBody(), true));
     }
 
-    public function testPostBatteryEvent()
+    public function testPostBatteryEvent(): void
     {
         $dynamap = $this->getMockBuilder('Dynamap\Dynamap')
             ->disableOriginalConstructor()
@@ -67,7 +67,7 @@ class EventControllerTest extends TestCase
         $this->assertSame(['inserted' => 1], json_decode((string) $res->getBody(), true));
     }
 
-    public function testPostTemperatureEvent()
+    public function testPostTemperatureEvent(): void
     {
         $dynamap = $this->getMockBuilder('Dynamap\Dynamap')
             ->disableOriginalConstructor()
