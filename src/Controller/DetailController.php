@@ -99,10 +99,10 @@ class DetailController
         $this->log->notice('getting details for ' . $mac . ' in ' . $end . 'ms');
 
         $response->getBody()->write((string) json_encode([
-            'max' => $rowsMax[0]['max'],
-            'max_date' => $rowsMax[0]['time'],
-            'min' => $rowsMin[0]['min'],
-            'min_date' => $rowsMin[0]['time'],
+            'max' => empty($rowsMax) ? null : $rowsMax[0]['max'],
+            'max_date' => empty($rowsMax) ? null : $rowsMax[0]['time'],
+            'min' => empty($rowsMax) ? null : $rowsMin[0]['min'],
+            'min_date' => empty($rowsMax) ? null : $rowsMin[0]['time'],
             'last_24h' => $last24h,
             'mean_24h' => empty($data24h[0]) ? null : round($data24h[0]['mean'], 1),
             'min_24h' => empty($data24h[0]) ? null : round($data24h[0]['min'], 1),

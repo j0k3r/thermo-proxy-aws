@@ -32,7 +32,7 @@ $dynamoOptions = [
 $container->set('dynamodb', null);
 
 // if the env variable isn't define, it means we are not in AWS env, so use local DynamoDB
-if (false === getenv('AWS_LAMBDA_RUNTIME_API')) {
+if (empty($_ENV['AWS_LAMBDA_RUNTIME_API'])) {
     $dynamoOptions['endpoint'] = 'http://localhost:8000/';
     $dynamoOptions['credentials'] = [
         'key' => 'FAKE_KEY',
@@ -56,18 +56,18 @@ $container->set('dynamap', $dynamap);
 // define influx
 $dsn = sprintf(
     'influxdb://%s:%s/%s',
-    getenv('INFLUXDB_HOST'),
-    getenv('INFLUXDB_PORT'),
-    getenv('INFLUXDB_DBNAME')
+    $_ENV['INFLUXDB_HOST'],
+    $_ENV['INFLUXDB_PORT'],
+    $_ENV['INFLUXDB_DBNAME']
 );
-if (!empty(getenv('INFLUXDB_USER')) && !empty(getenv('INFLUXDB_PASS'))) {
+if (!empty($_ENV['INFLUXDB_USER']) && !empty($_ENV['INFLUXDB_PASS'])) {
     $dsn = sprintf(
         'influxdb://%s:%s@%s:%s/%s',
-        getenv('INFLUXDB_USER'),
-        getenv('INFLUXDB_PASS'),
-        getenv('INFLUXDB_HOST'),
-        getenv('INFLUXDB_PORT'),
-        getenv('INFLUXDB_DBNAME')
+        $_ENV['INFLUXDB_USER'],
+        $_ENV['INFLUXDB_PASS'],
+        $_ENV['INFLUXDB_HOST'],
+        $_ENV['INFLUXDB_PORT'],
+        $_ENV['INFLUXDB_DBNAME']
     );
 }
 
@@ -105,6 +105,7 @@ $container->set('DeviceController', function (ContainerInterface $c) {
     return new DeviceController(
         $c->get('dynamap'),
         $c->get('dynamodb'),
+        $c->get('influx'),
         $c->get('log')
     );
 });
