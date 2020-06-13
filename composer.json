@@ -6,22 +6,20 @@
         "bref/bref": "^0.5.3",
         "bref/dynamap": "^0.2.0",
         "bref/logger": "^1.0",
-        "guzzlehttp/psr7": "^1.6",
-        "http-interop/http-factory-guzzle": "^1.0",
         "influxdb/influxdb-php": "^1.15",
-        "laminas/laminas-diactoros": "^2.2",
         "nyholm/psr7": "^1.1",
         "nyholm/psr7-server": "^1.0.0",
         "php-di/php-di": "^6.0",
-        "slim/psr7": "^1.0",
         "slim/slim": "^4.0",
         "symfony/yaml": "^5.0",
         "vlucas/phpdotenv": "^5.0"
     },
     "require-dev": {
         "friendsofphp/php-cs-fixer": "^2.15",
-        "phpstan/phpstan": "^0.11.15",
-        "phpstan/phpstan-phpunit": "^0.11.2",
+        "phpstan/extension-installer": "^1.0",
+        "phpstan/phpstan": "^0.12",
+        "phpstan/phpstan-deprecation-rules": "^0.12",
+        "phpstan/phpstan-phpunit": "^0.12",
         "symfony/phpunit-bridge": "^5.0"
     },
     "autoload": {

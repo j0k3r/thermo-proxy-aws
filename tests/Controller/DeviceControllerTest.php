@@ -11,7 +11,7 @@ use Thermo\Model\Device;
 
 class DeviceControllerTest extends TestCase
 {
-    public function testInitFailBecauseDataExists()
+    public function testInitFailBecauseDataExists(): void
     {
         $dynamap = $this->getMockBuilder('Dynamap\Dynamap')
             ->disableOriginalConstructor()
@@ -34,7 +34,7 @@ class DeviceControllerTest extends TestCase
         $this->assertArrayHasKey('error', json_decode((string) $res->getBody(), true));
     }
 
-    public function testInit()
+    public function testInit(): void
     {
         $dynamap = $this->getMockBuilder('Dynamap\Dynamap')
             ->disableOriginalConstructor()
