@@ -385,21 +385,21 @@
         },
         {
             "name": "bref/logger",
-            "version": "1.0.0",
+            "version": "1.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/brefphp/logger.git",
-                "reference": "837b2b7867c09d04d647a4042d86fa873e641c21"
+                "reference": "31624f064246ebddeeff30dd8b032d8422b5c916"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/brefphp/logger/zipball/837b2b7867c09d04d647a4042d86fa873e641c21",
-                "reference": "837b2b7867c09d04d647a4042d86fa873e641c21",
+                "url": "https://api.github.com/repos/brefphp/logger/zipball/31624f064246ebddeeff30dd8b032d8422b5c916",
+                "reference": "31624f064246ebddeeff30dd8b032d8422b5c916",
                 "shasum": ""
             },
             "require": {
                 "ext-json": "*",
-                "php": "^7.2",
+                "php": ">=7.2",
                 "psr/log": "^1.1"
             },
             "require-dev": {
@@ -427,7 +427,13 @@
                 "logger",
                 "psr-3"
             ],
-            "time": "2019-06-27T15:35:13+00:00"
+            "funding": [
+                {
+                    "url": "https://github.com/mnapoli",
+                    "type": "github"
+                }
+            ],
+            "time": "2020-09-25T15:35:03+00:00"
         },
         {
             "name": "graham-campbell/result-type",
