@@ -63,16 +63,16 @@
         },
         {
             "name": "async-aws/core",
-            "version": "1.4.2",
+            "version": "1.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/async-aws/core.git",
-                "reference": "b07dde3815e5a7b69edbd00d06f52cc3854c7de2"
+                "reference": "ddaebea1249a2a4b1b8aed756d58cc484d616afd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/async-aws/core/zipball/b07dde3815e5a7b69edbd00d06f52cc3854c7de2",
-                "reference": "b07dde3815e5a7b69edbd00d06f52cc3854c7de2",
+                "url": "https://api.github.com/repos/async-aws/core/zipball/ddaebea1249a2a4b1b8aed756d58cc484d616afd",
+                "reference": "ddaebea1249a2a4b1b8aed756d58cc484d616afd",
                 "shasum": ""
             },
             "require": {
@@ -123,7 +123,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2020-08-29T10:33:01+00:00"
+            "time": "2020-09-18T12:58:16+00:00"
         },
         {
             "name": "async-aws/lambda",
@@ -266,16 +266,16 @@
         },
         {
             "name": "bref/bref",
-            "version": "0.5.30",
+            "version": "0.5.31",
             "source": {
                 "type": "git",
                 "url": "https://github.com/brefphp/bref.git",
-                "reference": "0d32d2d225572259e1dd267df65c959be1d67571"
+                "reference": "669d651ac241cec3394a596166ef74f7770b5965"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/brefphp/bref/zipball/0d32d2d225572259e1dd267df65c959be1d67571",
-                "reference": "0d32d2d225572259e1dd267df65c959be1d67571",
+                "url": "https://api.github.com/repos/brefphp/bref/zipball/669d651ac241cec3394a596166ef74f7770b5965",
+                "reference": "669d651ac241cec3394a596166ef74f7770b5965",
                 "shasum": ""
             },
             "require": {
@@ -286,7 +286,8 @@
                 "hollodotme/fast-cgi-client": "^3.0",
                 "mnapoli/silly": "^1.7",
                 "nyholm/psr7": "^1.2",
-                "php": "^7.2.0",
+                "php": ">=7.2.0",
+                "psr/container": "^1.0",
                 "psr/http-message": "^1.0",
                 "psr/http-server-handler": "^1.0",
                 "riverline/multipart-parser": "^2.0.6",
@@ -294,11 +295,11 @@
                 "symfony/process": "^3.3|^4.0|^5.0"
             },
             "require-dev": {
-                "doctrine/coding-standard": "^5.0",
+                "dms/phpunit-arraysubset-asserts": "^0.1.0",
+                "doctrine/coding-standard": "^8.0",
                 "guzzlehttp/guzzle": "^6.3",
-                "phpstan/phpstan": "^0.11.5",
-                "phpunit/phpunit": "^7.5",
-                "zendframework/zend-diactoros": "^1.6|^2.0"
+                "phpstan/phpstan": "^0.12",
+                "phpunit/phpunit": "^8.0"
             },
             "bin": [
                 "bref"
@@ -335,7 +336,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2020-09-08T13:00:10+00:00"
+            "time": "2020-09-25T13:07:20+00:00"
         },
         {
             "name": "bref/dynamap",
