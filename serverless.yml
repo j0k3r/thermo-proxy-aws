@@ -34,7 +34,7 @@ functions:
         description: 'Thermo proxy'
         timeout: 20
         layers:
-            - ${bref:layer.php-72-fpm}
+            - ${bref:layer.php-74-fpm}
         events:
             - http: 'POST /peanut/api/v1/peanuts/{mac}/events/'
             - http: 'GET /thermo/{mac}/detail'

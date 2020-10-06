@@ -6,7 +6,7 @@ fix:
 	php vendor/bin/php-cs-fixer fix
 
 analyse:
-	php vendor/bin/phpstan analyse src tests --no-progress --level 7
+	php vendor/bin/phpstan analyse
 
 test:
 	php vendor/bin/simple-phpunit -v

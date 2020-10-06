@@ -1,18 +1,21 @@
 name: test
 
-on: push
+on: [push, pull_request]
 
 jobs:
-  build:
+  run:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v1
+    - uses: actions/checkout@v2
       with:
         fetch-depth: 1
 
-    - name: php
-      run: php -i
+    - name: Setup PHP
+      uses: shivammathur/setup-php@v2
+      with:
+        php-version: '7.4'
+        coverage: none
 
     - name: Composer dependencies
       run: composer install --no-ansi --no-interaction --no-suggest --no-progress --prefer-dist -o
