@@ -26,7 +26,7 @@ class DeviceTest extends TestCase
             'sort' => 1,
             'last_update' => '2019-08-23 11:51:30',
             'last_temperature' => 28.9,
-            'last_battery' => 96,
+            'last_battery' => '2890 mV (Good)',
         ];
 
         $this->assertSame($expected, $device->toArray());
