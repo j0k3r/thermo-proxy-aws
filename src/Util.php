@@ -11,9 +11,9 @@ class Util
         return $temperature / 100;
     }
 
-    public static function convertBattery(?int $battery): int
+    public static function convertBattery(?int $battery): string
     {
-        return (int) ($battery / 3000 * 100);
+        return $battery . ' mV (' . ($battery >= 2600 ? 'Good' : 'Low') . ')';
     }
 
     public static function formatValueForGraph(array $data, string $dateFormat): array

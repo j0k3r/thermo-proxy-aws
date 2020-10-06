@@ -16,9 +16,8 @@ class UtilTest extends TestCase
 
     public function testConvertBattery(): void
     {
-        $this->assertSame(3, Util::convertBattery(100));
-        $this->assertSame(80, Util::convertBattery(2418));
-        $this->assertSame(0, Util::convertBattery(null));
+        $this->assertSame('100 mV (Low)', Util::convertBattery(100));
+        $this->assertSame('2618 mV (Good)', Util::convertBattery(2618));
     }
 
     public function testFormatValueForGraph(): void
