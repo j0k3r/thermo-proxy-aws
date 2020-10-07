@@ -4,7 +4,7 @@
     "license": "MIT",
     "require": {
         "bref/bref": "^0.5.3",
-        "bref/dynamap": "^0.2.0",
+        "bref/dynamap": "^0.3.0",
         "bref/logger": "^1.0",
         "influxdb/influxdb-php": "^1.15",
         "nyholm/psr7": "^1.1",

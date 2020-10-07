@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "7085ddbb04e04cb1155f8cc9f662d3cb",
+    "content-hash": "9e26263f74af676a6b3c84a0e4725c5f",
     "packages": [
         {
             "name": "async-aws/cloud-formation",
@@ -181,16 +181,16 @@
         },
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.158.2",
+            "version": "3.158.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "b80957465d94c127254e36061dd3d0c3ccc94cc1"
+                "reference": "ac883fef515dc92785136f251a8337b33bff1d54"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/b80957465d94c127254e36061dd3d0c3ccc94cc1",
-                "reference": "b80957465d94c127254e36061dd3d0c3ccc94cc1",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/ac883fef515dc92785136f251a8337b33bff1d54",
+                "reference": "ac883fef515dc92785136f251a8337b33bff1d54",
                 "shasum": ""
             },
             "require": {
@@ -262,7 +262,7 @@
                 "s3",
                 "sdk"
             ],
-            "time": "2020-10-05T18:13:27+00:00"
+            "time": "2020-10-06T18:16:08+00:00"
         },
         {
             "name": "bref/bref",
@@ -340,22 +340,22 @@
         },
         {
             "name": "bref/dynamap",
-            "version": "0.2.0",
+            "version": "0.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/brefphp/dynamap.git",
-                "reference": "b4f271245e47f0fd88eb746f2451c29aa647f69d"
+                "reference": "3eaa40725af6cc95095363af3bf0144d712e2dcc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/brefphp/dynamap/zipball/b4f271245e47f0fd88eb746f2451c29aa647f69d",
-                "reference": "b4f271245e47f0fd88eb746f2451c29aa647f69d",
+                "url": "https://api.github.com/repos/brefphp/dynamap/zipball/3eaa40725af6cc95095363af3bf0144d712e2dcc",
+                "reference": "3eaa40725af6cc95095363af3bf0144d712e2dcc",
                 "shasum": ""
             },
             "require": {
                 "aws/aws-sdk-php": "^3.91",
                 "ext-json": "*",
-                "php": "^7.2",
+                "php": "^7.4",
                 "phpdocumentor/reflection-docblock": "^4.0",
                 "symfony/property-info": "^4.2"
             },
@@ -382,7 +382,7 @@
                 "object",
                 "orm"
             ],
-            "time": "2019-04-26T11:29:03+00:00"
+            "time": "2020-02-28T18:27:13+00:00"
         },
         {
             "name": "bref/logger",
@@ -485,6 +485,16 @@
                 "Result Type",
                 "Result-Type",
                 "result"
+            ],
+            "funding": [
+                {
+                    "url": "https://github.com/GrahamCampbell",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/graham-campbell/result-type",
+                    "type": "tidelift"
+                }
             ],
             "time": "2020-04-13T13:17:36+00:00"
         },
@@ -1105,6 +1115,16 @@
             "keywords": [
                 "psr-17",
                 "psr-7"
+            ],
+            "funding": [
+                {
+                    "url": "https://github.com/Zegnat",
+                    "type": "github"
+                },
+                {
+                    "url": "https://github.com/nyholm",
+                    "type": "github"
+                }
             ],
             "time": "2020-06-06T12:17:00+00:00"
         },
@@ -2164,6 +2184,16 @@
                 "framework",
                 "micro",
                 "router"
+            ],
+            "funding": [
+                {
+                    "url": "https://opencollective.com/slimphp",
+                    "type": "open_collective"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/slim/slim",
+                    "type": "tidelift"
+                }
             ],
             "time": "2020-04-14T20:49:48+00:00"
         },
