@@ -8,16 +8,16 @@
     "packages": [
         {
             "name": "async-aws/cloud-formation",
-            "version": "1.0.0",
+            "version": "1.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/async-aws/cloud-formation.git",
-                "reference": "2ec093fe23575b973dec42a39570336846f0be84"
+                "reference": "ad3e58942eafdef8472b5e55ca70b4667d6c9fd7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/async-aws/cloud-formation/zipball/2ec093fe23575b973dec42a39570336846f0be84",
-                "reference": "2ec093fe23575b973dec42a39570336846f0be84",
+                "url": "https://api.github.com/repos/async-aws/cloud-formation/zipball/ad3e58942eafdef8472b5e55ca70b4667d6c9fd7",
+                "reference": "ad3e58942eafdef8472b5e55ca70b4667d6c9fd7",
                 "shasum": ""
             },
             "require": {
@@ -59,7 +59,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2020-06-28T11:14:14+00:00"
+            "time": "2020-11-21T10:41:37+00:00"
         },
         {
             "name": "async-aws/core",
@@ -127,16 +127,16 @@
         },
         {
             "name": "async-aws/lambda",
-            "version": "1.1.0",
+            "version": "1.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/async-aws/lambda.git",
-                "reference": "3a58b2bdfba95d7e75635d65dc3f87725ba90bd8"
+                "reference": "07fb25c18511a7dd9590d2b4311a16f13ebef3f7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/async-aws/lambda/zipball/3a58b2bdfba95d7e75635d65dc3f87725ba90bd8",
-                "reference": "3a58b2bdfba95d7e75635d65dc3f87725ba90bd8",
+                "url": "https://api.github.com/repos/async-aws/lambda/zipball/07fb25c18511a7dd9590d2b4311a16f13ebef3f7",
+                "reference": "07fb25c18511a7dd9590d2b4311a16f13ebef3f7",
                 "shasum": ""
             },
             "require": {
@@ -147,7 +147,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.1-dev"
+                    "dev-master": "1.2-dev"
                 }
             },
             "autoload": {
@@ -177,7 +177,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2020-09-26T16:48:43+00:00"
+            "time": "2020-11-21T10:41:37+00:00"
         },
         {
             "name": "aws/aws-sdk-php",
@@ -266,16 +266,16 @@
         },
         {
             "name": "bref/bref",
-            "version": "0.5.32",
+            "version": "0.5.33",
             "source": {
                 "type": "git",
                 "url": "https://github.com/brefphp/bref.git",
-                "reference": "f9383bf0f58451b182a48afb131690e46e679729"
+                "reference": "efe0598d5bad9ea6b9fedd7a7b81b23d5e7ab4f9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/brefphp/bref/zipball/f9383bf0f58451b182a48afb131690e46e679729",
-                "reference": "f9383bf0f58451b182a48afb131690e46e679729",
+                "url": "https://api.github.com/repos/brefphp/bref/zipball/efe0598d5bad9ea6b9fedd7a7b81b23d5e7ab4f9",
+                "reference": "efe0598d5bad9ea6b9fedd7a7b81b23d5e7ab4f9",
                 "shasum": ""
             },
             "require": {
@@ -336,7 +336,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2020-11-04T18:01:01+00:00"
+            "time": "2020-11-21T18:05:13+00:00"
         },
         {
             "name": "bref/dynamap",
