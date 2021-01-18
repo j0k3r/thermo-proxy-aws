@@ -33,7 +33,7 @@ class DetailController
     {
         $start = microtime(true);
         $mac = $args['mac'];
-        if (false === filter_var($mac, FILTER_VALIDATE_MAC)) {
+        if (false === filter_var($mac, \FILTER_VALIDATE_MAC)) {
             $response->getBody()->write((string) json_encode([
                 'error' => 'Mac address (' . $mac . ') is not valid.',
             ]));
