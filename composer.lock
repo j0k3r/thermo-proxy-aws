@@ -8,16 +8,16 @@
     "packages": [
         {
             "name": "async-aws/core",
-            "version": "1.9.1",
+            "version": "1.9.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/async-aws/core.git",
-                "reference": "7c623f72aba439d514742c1476a803c7b4311cc8"
+                "reference": "c1ae5dd9f16cb42bc0c9a6641b10a5e4fb733de8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/async-aws/core/zipball/7c623f72aba439d514742c1476a803c7b4311cc8",
-                "reference": "7c623f72aba439d514742c1476a803c7b4311cc8",
+                "url": "https://api.github.com/repos/async-aws/core/zipball/c1ae5dd9f16cb42bc0c9a6641b10a5e4fb733de8",
+                "reference": "c1ae5dd9f16cb42bc0c9a6641b10a5e4fb733de8",
                 "shasum": ""
             },
             "require": {
@@ -25,7 +25,7 @@
                 "ext-json": "*",
                 "ext-simplexml": "*",
                 "php": "^7.2.5 || ^8.0",
-                "psr/cache": "^1.0",
+                "psr/cache": "^1.0 || ^2.0 || ^3.0",
                 "psr/log": "^1.0",
                 "symfony/deprecation-contracts": "^2.1",
                 "symfony/http-client": "^4.4.16 || ^5.1.7,!=5.2.0",
@@ -59,7 +59,7 @@
                 "sts"
             ],
             "support": {
-                "source": "https://github.com/async-aws/core/tree/1.9.1"
+                "source": "https://github.com/async-aws/core/tree/1.9.2"
             },
             "funding": [
                 {
@@ -71,20 +71,20 @@
                     "type": "github"
                 }
             ],
-            "time": "2021-02-24T11:03:41+00:00"
+            "time": "2021-04-19T10:46:58+00:00"
         },
         {
             "name": "async-aws/lambda",
-            "version": "1.3.0",
+            "version": "1.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/async-aws/lambda.git",
-                "reference": "0cd89c4449c88c5f50e2e46a498b50d42a27c8de"
+                "reference": "6aedd97e0e023945e00d3957ab5ed1ae77c37ccb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/async-aws/lambda/zipball/0cd89c4449c88c5f50e2e46a498b50d42a27c8de",
-                "reference": "0cd89c4449c88c5f50e2e46a498b50d42a27c8de",
+                "url": "https://api.github.com/repos/async-aws/lambda/zipball/6aedd97e0e023945e00d3957ab5ed1ae77c37ccb",
+                "reference": "6aedd97e0e023945e00d3957ab5ed1ae77c37ccb",
                 "shasum": ""
             },
             "require": {
@@ -95,7 +95,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.3-dev"
+                    "dev-master": "1.4-dev"
                 }
             },
             "autoload": {
@@ -116,7 +116,7 @@
                 "sdk"
             ],
             "support": {
-                "source": "https://github.com/async-aws/lambda/tree/1.3.0"
+                "source": "https://github.com/async-aws/lambda/tree/1.4.0"
             },
             "funding": [
                 {
@@ -128,7 +128,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2021-02-01T21:10:42+00:00"
+            "time": "2021-03-31T19:39:01+00:00"
         },
         {
             "name": "aws/aws-sdk-php",
@@ -222,16 +222,16 @@
         },
         {
             "name": "bref/bref",
-            "version": "1.2.3",
+            "version": "1.2.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/brefphp/bref.git",
-                "reference": "ae088d3a6ad64a7fe946298232089d4567ca5e3e"
+                "reference": "154681413f65de17124cf14fa3c12b2bf868f6f5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/brefphp/bref/zipball/ae088d3a6ad64a7fe946298232089d4567ca5e3e",
-                "reference": "ae088d3a6ad64a7fe946298232089d4567ca5e3e",
+                "url": "https://api.github.com/repos/brefphp/bref/zipball/154681413f65de17124cf14fa3c12b2bf868f6f5",
+                "reference": "154681413f65de17124cf14fa3c12b2bf868f6f5",
                 "shasum": ""
             },
             "require": {
@@ -282,7 +282,7 @@
             ],
             "support": {
                 "issues": "https://github.com/brefphp/bref/issues",
-                "source": "https://github.com/brefphp/bref/tree/1.2.3"
+                "source": "https://github.com/brefphp/bref/tree/1.2.4"
             },
             "funding": [
                 {
@@ -294,7 +294,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2021-03-22T09:52:20+00:00"
+            "time": "2021-04-19T12:28:00+00:00"
         },
         {
             "name": "bref/dynamap",
@@ -2522,16 +2522,16 @@
         },
         {
             "name": "symfony/http-client",
-            "version": "v5.2.4",
+            "version": "v5.2.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/http-client.git",
-                "reference": "c7d1f35a31ef153a302e3f80336170e1280b983d"
+                "reference": "3c3075467da15bc2edf38d2ac20d34719e794bd8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/http-client/zipball/c7d1f35a31ef153a302e3f80336170e1280b983d",
-                "reference": "c7d1f35a31ef153a302e3f80336170e1280b983d",
+                "url": "https://api.github.com/repos/symfony/http-client/zipball/3c3075467da15bc2edf38d2ac20d34719e794bd8",
+                "reference": "3c3075467da15bc2edf38d2ac20d34719e794bd8",
                 "shasum": ""
             },
             "require": {
@@ -2588,7 +2588,7 @@
             "description": "Provides powerful methods to fetch HTTP resources synchronously or asynchronously",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/http-client/tree/v5.2.4"
+                "source": "https://github.com/symfony/http-client/tree/v5.2.6"
             },
             "funding": [
                 {
@@ -2604,7 +2604,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-03-01T00:40:14+00:00"
+            "time": "2021-03-28T09:42:18+00:00"
         },
         {
             "name": "symfony/http-client-contracts",
