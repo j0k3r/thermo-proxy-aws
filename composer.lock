@@ -273,16 +273,16 @@
         },
         {
             "name": "bref/bref",
-            "version": "1.3.2",
+            "version": "1.3.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/brefphp/bref.git",
-                "reference": "2b8cdaf1ecffbfa15dbdea6ec9d7c3506d22f77b"
+                "reference": "b7ad134f4be53a8ed83600db636ad53306eea9fc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/brefphp/bref/zipball/2b8cdaf1ecffbfa15dbdea6ec9d7c3506d22f77b",
-                "reference": "2b8cdaf1ecffbfa15dbdea6ec9d7c3506d22f77b",
+                "url": "https://api.github.com/repos/brefphp/bref/zipball/b7ad134f4be53a8ed83600db636ad53306eea9fc",
+                "reference": "b7ad134f4be53a8ed83600db636ad53306eea9fc",
                 "shasum": ""
             },
             "require": {
@@ -293,7 +293,7 @@
                 "mnapoli/silly": "^1.7",
                 "nyholm/psr7": "^1.2",
                 "php": ">=7.3.0",
-                "psr/container": "^1.0",
+                "psr/container": "^1.0|^2.0",
                 "psr/http-message": "^1.0",
                 "psr/http-server-handler": "^1.0",
                 "riverline/multipart-parser": "^2.0.6",
@@ -335,7 +335,7 @@
             ],
             "support": {
                 "issues": "https://github.com/brefphp/bref/issues",
-                "source": "https://github.com/brefphp/bref/tree/1.3.2"
+                "source": "https://github.com/brefphp/bref/tree/1.3.3"
             },
             "funding": [
                 {
@@ -347,7 +347,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2021-09-24T16:53:27+00:00"
+            "time": "2021-10-24T09:18:48+00:00"
         },
         {
             "name": "bref/dynamap",
@@ -2156,16 +2156,16 @@
         },
         {
             "name": "riverline/multipart-parser",
-            "version": "2.0.8",
+            "version": "2.0.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Riverline/multipart-parser.git",
-                "reference": "2fe9026789754c1ff07c06047f0acc113e90933a"
+                "reference": "ebba10245b5a6e03a673ff52c547d05029caedab"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Riverline/multipart-parser/zipball/2fe9026789754c1ff07c06047f0acc113e90933a",
-                "reference": "2fe9026789754c1ff07c06047f0acc113e90933a",
+                "url": "https://api.github.com/repos/Riverline/multipart-parser/zipball/ebba10245b5a6e03a673ff52c547d05029caedab",
+                "reference": "ebba10245b5a6e03a673ff52c547d05029caedab",
                 "shasum": ""
             },
             "require": {
@@ -2206,9 +2206,9 @@
             ],
             "support": {
                 "issues": "https://github.com/Riverline/multipart-parser/issues",
-                "source": "https://github.com/Riverline/multipart-parser/tree/2.0.8"
+                "source": "https://github.com/Riverline/multipart-parser/tree/2.0.9"
             },
-            "time": "2020-01-24T09:39:24+00:00"
+            "time": "2021-10-18T09:56:35+00:00"
         },
         {
             "name": "slim/slim",
