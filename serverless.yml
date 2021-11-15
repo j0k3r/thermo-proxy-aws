@@ -4,6 +4,8 @@ provider:
     name: aws
     region: eu-west-1
     runtime: provided.al2
+    lambdaHashingVersion: 20201221
+    versionFunctions: false
     tags:
         Application: thermo
     stackTags:
