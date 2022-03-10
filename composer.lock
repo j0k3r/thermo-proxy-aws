@@ -401,28 +401,28 @@
         },
         {
             "name": "bref/logger",
-            "version": "1.0.1",
+            "version": "1.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/brefphp/logger.git",
-                "reference": "31624f064246ebddeeff30dd8b032d8422b5c916"
+                "reference": "76710c21a58a939fef23a482aaeacfd23170579b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/brefphp/logger/zipball/31624f064246ebddeeff30dd8b032d8422b5c916",
-                "reference": "31624f064246ebddeeff30dd8b032d8422b5c916",
+                "url": "https://api.github.com/repos/brefphp/logger/zipball/76710c21a58a939fef23a482aaeacfd23170579b",
+                "reference": "76710c21a58a939fef23a482aaeacfd23170579b",
                 "shasum": ""
             },
             "require": {
                 "ext-json": "*",
                 "php": ">=7.2",
-                "psr/log": "^1.1"
+                "psr/log": "^1.1 | ^2.0 | ^3.0"
             },
             "require-dev": {
-                "mnapoli/hard-mode": "^0.1.1",
+                "mnapoli/hard-mode": "^0.3.0",
                 "mnapoli/pretty": "^1.0",
-                "phpstan/phpstan": "^0.11.2",
-                "phpunit/phpunit": "^8.0"
+                "phpstan/phpstan": "^1.0",
+                "phpunit/phpunit": "^9.5"
             },
             "type": "library",
             "autoload": {
@@ -445,7 +445,7 @@
             ],
             "support": {
                 "issues": "https://github.com/brefphp/logger/issues",
-                "source": "https://github.com/brefphp/logger/tree/1.0.1"
+                "source": "https://github.com/brefphp/logger/tree/1.0.2"
             },
             "funding": [
                 {
@@ -453,7 +453,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2020-09-25T15:35:03+00:00"
+            "time": "2022-03-09T20:54:12+00:00"
         },
         {
             "name": "graham-campbell/result-type",
