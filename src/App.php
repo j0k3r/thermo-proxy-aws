@@ -74,7 +74,7 @@ if (!empty($_ENV['INFLUXDB_USER']) && !empty($_ENV['INFLUXDB_PASS'])) {
 $influx = Client::fromDSN($dsn);
 $container->set('influx', $influx);
 
-$container->set('log', (new StderrLogger(LogLevel::NOTICE)));
+$container->set('log', new StderrLogger(LogLevel::NOTICE));
 
 // define app
 $app = AppFactory::createFromContainer($container);
