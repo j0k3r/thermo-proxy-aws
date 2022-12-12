@@ -273,16 +273,16 @@
         },
         {
             "name": "bref/bref",
-            "version": "1.7.13",
+            "version": "1.7.14",
             "source": {
                 "type": "git",
                 "url": "https://github.com/brefphp/bref.git",
-                "reference": "d5dfd559d594f05bf2a01044127f9eab5d570af2"
+                "reference": "3d998807f7a7f846ddc7ebfd51452d17c3c8f29e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/brefphp/bref/zipball/d5dfd559d594f05bf2a01044127f9eab5d570af2",
-                "reference": "d5dfd559d594f05bf2a01044127f9eab5d570af2",
+                "url": "https://api.github.com/repos/brefphp/bref/zipball/3d998807f7a7f846ddc7ebfd51452d17c3c8f29e",
+                "reference": "3d998807f7a7f846ddc7ebfd51452d17c3c8f29e",
                 "shasum": ""
             },
             "require": {
@@ -335,7 +335,7 @@
             ],
             "support": {
                 "issues": "https://github.com/brefphp/bref/issues",
-                "source": "https://github.com/brefphp/bref/tree/1.7.13"
+                "source": "https://github.com/brefphp/bref/tree/1.7.14"
             },
             "funding": [
                 {
@@ -347,7 +347,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2022-12-08T19:04:03+00:00"
+            "time": "2022-12-09T12:59:48+00:00"
         },
         {
             "name": "bref/dynamap",
