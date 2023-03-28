@@ -273,16 +273,16 @@
         },
         {
             "name": "bref/bref",
-            "version": "1.7.25",
+            "version": "1.7.26",
             "source": {
                 "type": "git",
                 "url": "https://github.com/brefphp/bref.git",
-                "reference": "ef2745e28ec6caf041abba3817a4e0592aa16200"
+                "reference": "53ddf84fad4d5bbd4ccefcc68ca359d71e669a2a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/brefphp/bref/zipball/ef2745e28ec6caf041abba3817a4e0592aa16200",
-                "reference": "ef2745e28ec6caf041abba3817a4e0592aa16200",
+                "url": "https://api.github.com/repos/brefphp/bref/zipball/53ddf84fad4d5bbd4ccefcc68ca359d71e669a2a",
+                "reference": "53ddf84fad4d5bbd4ccefcc68ca359d71e669a2a",
                 "shasum": ""
             },
             "require": {
@@ -335,7 +335,7 @@
             ],
             "support": {
                 "issues": "https://github.com/brefphp/bref/issues",
-                "source": "https://github.com/brefphp/bref/tree/1.7.25"
+                "source": "https://github.com/brefphp/bref/tree/1.7.26"
             },
             "funding": [
                 {
@@ -347,7 +347,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-03-23T13:17:27+00:00"
+            "time": "2023-03-28T11:51:28+00:00"
         },
         {
             "name": "bref/dynamap",
