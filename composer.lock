@@ -273,16 +273,16 @@
         },
         {
             "name": "bref/bref",
-            "version": "1.7.26",
+            "version": "1.7.27",
             "source": {
                 "type": "git",
                 "url": "https://github.com/brefphp/bref.git",
-                "reference": "53ddf84fad4d5bbd4ccefcc68ca359d71e669a2a"
+                "reference": "35f2c4b6b3494b476f5e4040420c7e1f07989a5f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/brefphp/bref/zipball/53ddf84fad4d5bbd4ccefcc68ca359d71e669a2a",
-                "reference": "53ddf84fad4d5bbd4ccefcc68ca359d71e669a2a",
+                "url": "https://api.github.com/repos/brefphp/bref/zipball/35f2c4b6b3494b476f5e4040420c7e1f07989a5f",
+                "reference": "35f2c4b6b3494b476f5e4040420c7e1f07989a5f",
                 "shasum": ""
             },
             "require": {
@@ -335,7 +335,7 @@
             ],
             "support": {
                 "issues": "https://github.com/brefphp/bref/issues",
-                "source": "https://github.com/brefphp/bref/tree/1.7.26"
+                "source": "https://github.com/brefphp/bref/tree/1.7.27"
             },
             "funding": [
                 {
@@ -347,7 +347,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-03-28T11:51:28+00:00"
+            "time": "2023-04-03T09:45:58+00:00"
         },
         {
             "name": "bref/dynamap",
@@ -2598,16 +2598,16 @@
         },
         {
             "name": "symfony/http-client",
-            "version": "v5.4.21",
+            "version": "v5.4.22",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/http-client.git",
-                "reference": "6b88914a7f1bf144df15904f60a19be78a67a3b2"
+                "reference": "4cd1b7e7ee846c8b22cb47cbc435344af9b2a8bf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/http-client/zipball/6b88914a7f1bf144df15904f60a19be78a67a3b2",
-                "reference": "6b88914a7f1bf144df15904f60a19be78a67a3b2",
+                "url": "https://api.github.com/repos/symfony/http-client/zipball/4cd1b7e7ee846c8b22cb47cbc435344af9b2a8bf",
+                "reference": "4cd1b7e7ee846c8b22cb47cbc435344af9b2a8bf",
                 "shasum": ""
             },
             "require": {
@@ -2664,8 +2664,11 @@
             ],
             "description": "Provides powerful methods to fetch HTTP resources synchronously or asynchronously",
             "homepage": "https://symfony.com",
+            "keywords": [
+                "http"
+            ],
             "support": {
-                "source": "https://github.com/symfony/http-client/tree/v5.4.21"
+                "source": "https://github.com/symfony/http-client/tree/v5.4.22"
             },
             "funding": [
                 {
@@ -2681,7 +2684,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2023-02-17T21:35:35+00:00"
+            "time": "2023-03-24T15:16:26+00:00"
         },
         {
             "name": "symfony/http-client-contracts",
