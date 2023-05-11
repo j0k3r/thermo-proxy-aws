@@ -1,6 +1,6 @@
 # Thermo proxy AWS
 
-![test](https://github.com/j0k3r/thermo-proxy-aws/workflows/test/badge.svg)
+![test](https://github.com/j0k3r/thermo-proxy-aws/actions/workflows/tests.yml/badge.svg)
 ![PHPStan level max](https://img.shields.io/badge/PHPStan-level%20max-brightgreen.svg?style=flat)
 
 _TL;DR_: a little PHP app running on AWS Lambda that:
