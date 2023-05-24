@@ -66,7 +66,7 @@ class DetailControllerTest extends TestCase
                     'min' => 3.21,
                 ]];
 
-                if (false !== strpos($argument, 'SELECT MAX("value")/100 FROM')) {
+                if (str_contains($argument, 'SELECT MAX("value")/100 FROM')) {
                     $data = [
                         [
                             'max' => 30,
@@ -75,7 +75,7 @@ class DetailControllerTest extends TestCase
                     ];
                 }
 
-                if (false !== strpos($argument, 'SELECT MIN("value")/100 FROM')) {
+                if (str_contains($argument, 'SELECT MIN("value")/100 FROM')) {
                     $data = [
                         [
                             'min' => 3,
@@ -84,7 +84,7 @@ class DetailControllerTest extends TestCase
                     ];
                 }
 
-                if (false !== strpos($argument, 'GROUP BY')) {
+                if (str_contains($argument, 'GROUP BY')) {
                     $data = [
                         [
                             'mean' => 43.21,
