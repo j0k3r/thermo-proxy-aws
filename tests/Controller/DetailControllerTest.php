@@ -31,7 +31,7 @@ class DetailControllerTest extends TestCase
         $res = $controller->detail($request, new Response(), ['mac' => ':16']);
 
         $this->assertSame('application/json', $res->getHeader('Content-Type')[0]);
-        $this->assertArrayHasKey('error', json_decode((string) $res->getBody(), true));
+        $this->assertArrayHasKey('error', (array) json_decode((string) $res->getBody(), true));
     }
 
     public function testDetail(): void
@@ -127,7 +127,7 @@ class DetailControllerTest extends TestCase
         $res = $controller->detail($request, new Response(), ['mac' => '00:0A:95:9D:68:16']);
 
         $this->assertSame('application/json', $res->getHeader('Content-Type')[0]);
-        $body = json_decode((string) $res->getBody(), true);
+        $body = (array) json_decode((string) $res->getBody(), true);
         $this->assertArrayHasKey('max', $body);
         $this->assertArrayHasKey('max_date', $body);
         $this->assertArrayHasKey('min', $body);

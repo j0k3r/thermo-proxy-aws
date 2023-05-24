@@ -5,3 +5,4 @@ init_db.yml
 build/
 .env
 .phpunit.result.cache
+.php_cs.cache

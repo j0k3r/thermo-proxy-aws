@@ -2,13 +2,16 @@
 
 require __DIR__ . '/../vendor/autoload.php';
 
+use Aws\DynamoDb\DynamoDbClient;
 use Aws\Sdk;
 use Bref\Logger\StderrLogger;
 use DI\Container;
 use Dotenv\Dotenv;
 use Dynamap\Dynamap;
 use InfluxDB\Client;
+use InfluxDB\Database;
 use Psr\Container\ContainerInterface;
+use Psr\Log\AbstractLogger;
 use Psr\Log\LogLevel;
 use Slim\Factory\AppFactory;
 use Thermo\Controller\DetailController;
@@ -82,31 +85,59 @@ $app->addErrorMiddleware(true, true, true);
 
 // define controller as a service
 $container->set('ListController', function (ContainerInterface $c) {
+    /** @var Dynamap */
+    $dynamap = $c->get('dynamap');
+    /** @var AbstractLogger */
+    $log = $c->get('log');
+
     return new ListController(
-        $c->get('dynamap'),
-        $c->get('log')
+        $dynamap,
+        $log
     );
 });
 $container->set('DetailController', function (ContainerInterface $c) {
+    /** @var Dynamap */
+    $dynamap = $c->get('dynamap');
+    /** @var Database */
+    $influx = $c->get('influx');
+    /** @var AbstractLogger */
+    $log = $c->get('log');
+
     return new DetailController(
-        $c->get('dynamap'),
-        $c->get('influx'),
-        $c->get('log')
+        $dynamap,
+        $influx,
+        $log
     );
 });
 $container->set('EventController', function (ContainerInterface $c) {
+    /** @var Dynamap */
+    $dynamap = $c->get('dynamap');
+    /** @var Database */
+    $influx = $c->get('influx');
+    /** @var AbstractLogger */
+    $log = $c->get('log');
+
     return new EventController(
-        $c->get('dynamap'),
-        $c->get('influx'),
-        $c->get('log')
+        $dynamap,
+        $influx,
+        $log
     );
 });
 $container->set('DeviceController', function (ContainerInterface $c) {
+    /** @var Dynamap */
+    $dynamap = $c->get('dynamap');
+    /** @var DynamoDbClient */
+    $dynamodb = $c->get('dynamodb');
+    /** @var Database */
+    $influx = $c->get('influx');
+    /** @var AbstractLogger */
+    $log = $c->get('log');
+
     return new DeviceController(
-        $c->get('dynamap'),
-        $c->get('dynamodb'),
-        $c->get('influx'),
-        $c->get('log')
+        $dynamap,
+        $dynamodb,
+        $influx,
+        $log
     );
 });
 
