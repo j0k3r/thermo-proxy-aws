@@ -38,7 +38,7 @@ class DeviceControllerTest extends TestCase
         $res = $controller->init($request, new Response());
 
         $this->assertSame('application/json', $res->getHeader('Content-Type')[0]);
-        $this->assertArrayHasKey('error', json_decode((string) $res->getBody(), true));
+        $this->assertArrayHasKey('error', (array) json_decode((string) $res->getBody(), true));
     }
 
     public function testInit(): void
@@ -68,6 +68,6 @@ class DeviceControllerTest extends TestCase
         $res = $controller->init($request, new Response());
 
         $this->assertSame('application/json', $res->getHeader('Content-Type')[0]);
-        $this->assertArrayHasKey('created', json_decode((string) $res->getBody(), true));
+        $this->assertArrayHasKey('created', (array) json_decode((string) $res->getBody(), true));
     }
 }

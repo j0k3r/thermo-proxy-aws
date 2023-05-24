@@ -27,7 +27,7 @@ class ListControllerTest extends TestCase
         $res = $controller->list($request, new Response());
 
         $this->assertSame('application/json', $res->getHeader('Content-Type')[0]);
-        $this->assertSame([], json_decode((string) $res->getBody(), true));
+        $this->assertSame([], (array) json_decode((string) $res->getBody(), true));
     }
 
     public function testList(): void
@@ -67,14 +67,14 @@ class ListControllerTest extends TestCase
         $res = $controller->list($request, new Response());
 
         $this->assertSame('application/json', $res->getHeader('Content-Type')[0]);
-        $body = json_decode((string) $res->getBody(), true);
+        $body = (array) json_decode((string) $res->getBody(), true);
         $this->assertCount(2, $body);
 
-        $first = current($body);
+        $first = (array) current($body);
         $this->assertSame('Outside', $first['label']);
         $this->assertSame(1.2, $first['last_temperature']);
 
-        $second = next($body);
+        $second = (array) next($body);
         $this->assertSame('Home', $second['label']);
         $this->assertSame(28.9, $second['last_temperature']);
     }

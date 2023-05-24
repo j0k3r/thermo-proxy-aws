@@ -47,7 +47,13 @@ class DeviceController
         } catch (DynamoDbException $e) {
             if ('Cannot do operations on a non-existent table' === $e->getAwsErrorMessage() && null !== $this->dynamodb) {
                 // create table by re-using defined information in serverless
-                $serverless = Yaml::parseFile(__DIR__ . '/../../serverless.yml');
+                $serverless = (array) Yaml::parseFile(__DIR__ . '/../../serverless.yml');
+
+                if (!\is_array($serverless)) {
+                    return $response
+                        ->withHeader('Content-Type', 'application/json')
+                        ->withStatus(500);
+                }
 
                 $this->dynamodb->createTable($serverless['resources']['Resources']['ThermoTable']['Properties']);
             }
@@ -69,13 +75,19 @@ class DeviceController
         }
 
         try {
-            $devices = Yaml::parseFile(__DIR__ . '/../../init_db.yml');
+            $devices = (array) Yaml::parseFile(__DIR__ . '/../../init_db.yml');
         } catch (ParseException $exception) {
             $response->getBody()->write((string) json_encode([
                 'error' => 'Error while reading the init_db.yml file',
                 'exception' => $exception->getMessage(),
             ]));
 
+            return $response
+                ->withHeader('Content-Type', 'application/json')
+                ->withStatus(500);
+        }
+
+        if (!\is_array($devices)) {
             return $response
                 ->withHeader('Content-Type', 'application/json')
                 ->withStatus(500);

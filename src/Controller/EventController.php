@@ -36,6 +36,12 @@ class EventController
 
         $events = json_decode((string) $request->getBody(), true);
 
+        if (!\is_array($events)) {
+            return $response
+                ->withHeader('Content-Type', 'application/json')
+                ->withStatus(400);
+        }
+
         foreach ($events as $event) {
             if ('temperature' === $event['type']) {
                 $date = \DateTime::createFromFormat('Y-m-d\TH:i:s.uO', $event['dateEvent']);
